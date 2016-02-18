@@ -83,24 +83,25 @@
 		</android.support.design.widget.AppBarLayout>
 
 
+
 		<android.support.v4.widget.NestedScrollView
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:scrollbars="none"
-			app:behavior_overlapTop="25dp"
+			android:scrollbars="vertical"
+			app:behavior_overlapTop="30dp"
 			app:layout_behavior="@string/appbar_scrolling_view_behavior"
 			>
 
 			<LinearLayout
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:orientation="vertical">
+				android:orientation="vertical"
+				>
 
 				<android.support.v7.widget.CardView
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:layout_margin="8dp"
-					app:cardElevation="8dp"
 					app:contentPadding="5dp"
 					app:cardBackgroundColor="@android:color/white"
 					>
@@ -114,7 +115,8 @@
 						<LinearLayout
 							android:orientation="horizontal"
 							android:layout_width="match_parent"
-							android:layout_height="wrap_content">
+							android:layout_height="wrap_content"
+							android:id="@+id/linearLayout1">
 
 							<Button
 								android:layout_width="match_parent"
@@ -187,6 +189,16 @@
 								android:paddingBottom="8dp" />
 						</LinearLayout>
 
+						<View
+							android:layout_width="wrap_content"
+							android:layout_height="1dp"
+							android:background="#ffd5d5d5"
+							android:id="@+id/linea"
+							android:layout_above="@+id/linearLayout1"
+							android:layout_toRightOf="@+id/imagen">
+
+						</View>
+
 						<LinearLayout
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
@@ -206,13 +218,6 @@
 									android:id="@+id/imageView1"
 									android:src="@drawable/ic_phone" />
 
-								<TextView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:textAppearance="?android:attr/textAppearanceSmall"
-									android:text="Dirección:"
-									android:padding="5dp"
-									android:id="@+id/textView1" />
 
 								<TextView
 									android:layout_width="wrap_content"
@@ -236,13 +241,6 @@
 									android:id="@+id/imageView2"
 									android:src="@drawable/ic_phone" />
 
-								<TextView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:textAppearance="?android:attr/textAppearanceSmall"
-									android:text="Teléfonos:"
-									android:padding="5dp"
-									android:id="@+id/textView2" />
 
 								<TextView
 									android:layout_width="wrap_content"
@@ -266,13 +264,7 @@
 									android:id="@+id/imageView3"
 									android:src="@drawable/ic_phone" />
 
-								<TextView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:textAppearance="?android:attr/textAppearanceSmall"
-									android:text="Web:"
-									android:padding="5dp"
-									android:id="@+id/textView3" />
+
 
 								<TextView
 									android:layout_width="wrap_content"
@@ -296,13 +288,6 @@
 									android:id="@+id/imageView4"
 									android:src="@drawable/ic_phone" />
 
-								<TextView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:textAppearance="?android:attr/textAppearanceSmall"
-									android:text="Email:"
-									android:padding="5dp"
-									android:id="@+id/textView4" />
 
 								<TextView
 									android:layout_width="wrap_content"
@@ -321,284 +306,106 @@
 
 				</android.support.v7.widget.CardView>
 
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical"
+					android:layout_marginTop="7dp"
+					android:layout_marginBottom="7dp">
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="20dp"
+						android:layout_marginLeft="10dp"
+						android:text="Promoción y ofertas"
+						/>
+
+					<android.support.v7.widget.RecyclerView
+						android:id="@+id/recyclerview1"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_below="@+id/cardview2"
+						android:clipToPadding="false"
+						android:paddingTop="0dp"/>
+				</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp">
 				<TextView
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:layout_marginTop="20dp"
 					android:layout_marginLeft="10dp"
-					android:text="Ultimas publicaciones"
+					android:text="Cupones y vouchers"
 					/>
 
-				<android.support.v7.widget.CardView
+				<android.support.v7.widget.RecyclerView
+					android:id="@+id/recyclerview2"
 					android:layout_width="match_parent"
-					android:layout_height="200dp"
-					android:layout_marginTop="5dp"
-					app:cardElevation="0dp"
-					app:contentPadding="5dp"
-					app:cardBackgroundColor="@android:color/white">
+					android:layout_height="match_parent"
+					android:layout_below="@+id/cardview2"
+					android:clipToPadding="false"
+					android:paddingTop="0dp"/>
+			</LinearLayout>
 
-					<LinearLayout
-						android:orientation="vertical"
-						android:layout_width="match_parent"
-						android:layout_height="match_parent">
-
-						<android.support.v4.view.ViewPager
-							android:id="@+id/pager"
-							android:layout_width="match_parent"
-							android:layout_height="match_parent"
-							android:layout_weight="1" />
-
-						<com.viewpagerindicator.CirclePageIndicator
-							android:id="@+id/indicator"
-							android:padding="10dip"
-							android:layout_height="wrap_content"
-							android:layout_width="match_parent"
-							app:radius="4dp"
-							app:fillColor="#85BF45"
-							app:pageColor="@android:color/transparent"
-							app:strokeColor="#85BF45"
-							app:strokeWidth="1dp"
-							android:visibility="gone"
-							/>
-					</LinearLayout>
-
-				</android.support.v7.widget.CardView>
-
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp">
 				<TextView
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:layout_marginTop="20dp"
 					android:layout_marginLeft="10dp"
-					android:text="Publicaciones"
+					android:text="Sorteos"
 					/>
 
-				<android.support.v7.widget.CardView
+				<android.support.v7.widget.RecyclerView
+					android:id="@+id/recyclerview3"
 					android:layout_width="match_parent"
-					android:layout_height="400dp"
-					android:layout_marginTop="5dp"
-					app:cardElevation="0dp"
-					app:contentPadding="5dp"
-					app:cardBackgroundColor="@android:color/white">
+					android:layout_height="match_parent"
+					android:layout_below="@+id/cardview2"
+					android:clipToPadding="false"
+					android:paddingTop="0dp"/>
+			</LinearLayout>
 
-					<LinearLayout
-						android:orientation="vertical"
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical"
+					android:layout_marginTop="5dp"
+					android:layout_marginBottom="5dp">
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="20dp"
+						android:layout_marginLeft="10dp"
+						android:layout_marginBottom="10dp"
+						android:text="Comentarios"
+						/>
+
+					<android.support.v7.widget.RecyclerView
+						android:id="@+id/recyclerview4"
 						android:layout_width="match_parent"
 						android:layout_height="match_parent"
-						android:padding="5dp">
+						android:layout_below="@+id/cardview2"
+						android:clipToPadding="false"
+						android:background="@android:color/white"
+						android:paddingTop="0dp"/>
 
-						<LinearLayout
-							android:orientation="vertical"
-							android:layout_width="match_parent"
-							android:layout_height="match_parent"
-							android:layout_weight="0.5">
-
-							<TextView
-								android:id="@+id/titulo_publicacion"
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"
-								android:layout_marginTop="10dp"
-								android:layout_marginLeft="10dp"
-								android:textColor="@android:color/black"
-								android:text="Aprovechá con todo el verano!!!"
-								/>
-
-							<FrameLayout
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:clipChildren="false"
-								>
-
-								<com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
-									android:layout_width="match_parent"
-									android:layout_height="match_parent"
-									android:layout_marginTop="10dp"
-									android:padding="10dp"
-									android:id="@+id/wizard_fragment_image_view1"
-									android:src="@drawable/intro_screen1"
-									android:scaleType="centerCrop"/>
-
-								<com.exequiel.shopcenter.componentes.LobsterTextView
-									android:id="@+id/item_movie_title"
-									android:layout_width="match_parent"
-									android:layout_height="wrap_content"
-									android:layout_marginLeft="10dp"
-									android:layout_marginRight="10dp"
-									android:paddingBottom="@dimen/activity_vertical_margin"
-									android:paddingLeft="50dp"
-									android:paddingRight="50dp"
-									android:paddingTop="@dimen/activity_vertical_margin"
-									android:background="#AA000000"
-									android:maxLines="2"
-									android:ellipsize="end"
-									android:textColor="@android:color/white"
-									android:layout_gravity="bottom"
-									android:gravity="bottom"
-									tools:text="Holaaaa"
-									android:textSize="40sp"
-									/>
-
-							</FrameLayout>
-
-						</LinearLayout>
-
-						<LinearLayout
-							android:orientation="vertical"
-							android:layout_width="match_parent"
-							android:layout_height="match_parent"
-							android:layout_weight="1.2">
-
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="Medium Text"
-								android:textStyle="bold"
-								android:id="@+id/fragment_wizard_title1"
-								android:layout_gravity="center_horizontal"
-								android:gravity="center_horizontal"
-								android:layout_weight="1"
-								/>
-
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="Sta je in een van onze stores en is jouw maat         niet op vooraad?         Scan and find dit artikel bij jou in de buurt!"
-								android:id="@+id/fragment_wizard_subtitle5"
-								android:layout_gravity="center_vertical"
-								android:gravity="top|center_vertical|center_horizontal"
-								android:layout_weight="1" />
-						</LinearLayout>
-					</LinearLayout>
-
-
-				</android.support.v7.widget.CardView>
-
-				<android.support.v7.widget.CardView
-					android:layout_width="match_parent"
-					android:layout_height="400dp"
-					android:layout_marginTop="5dp"
-					app:cardElevation="0dp"
-					app:contentPadding="5dp"
-					app:cardBackgroundColor="@android:color/white">
-
-					<LinearLayout
-						android:orientation="vertical"
+					<TextView
 						android:layout_width="match_parent"
-						android:layout_height="match_parent"
-						android:padding="5dp">
-
-						<LinearLayout
-							android:orientation="vertical"
-							android:layout_width="match_parent"
-							android:layout_height="match_parent"
-							android:layout_weight="0.5">
-
-							<com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:id="@+id/wizard_fragment_image_view2"
-								android:src="@drawable/intro_screen1"
-								android:scaleType="centerCrop"/>
-
-						</LinearLayout>
-
-						<LinearLayout
-							android:orientation="vertical"
-							android:layout_width="match_parent"
-							android:layout_height="match_parent"
-							android:layout_weight="1.2">
-
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="Medium Text"
-								android:textStyle="bold"
-								android:id="@+id/fragment_wizard_title2"
-								android:layout_gravity="center_horizontal"
-								android:gravity="center_horizontal"
-								android:layout_weight="1"
-								/>
-
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="Sta je in een van onze stores en is jouw maat         niet op vooraad?         Scan and find dit artikel bij jou in de buurt!"
-								android:id="@+id/fragment_wizard_subtitle1"
-								android:layout_gravity="center_vertical"
-								android:gravity="top|center_vertical|center_horizontal"
-								android:layout_weight="1" />
-						</LinearLayout>
-					</LinearLayout>
-
-
-				</android.support.v7.widget.CardView>
-
-
-				<android.support.v7.widget.CardView
-					android:layout_width="match_parent"
-					android:layout_height="400dp"
-					android:layout_marginTop="5dp"
-					app:cardElevation="0dp"
-					app:contentPadding="5dp"
-					app:cardBackgroundColor="@android:color/white">
-
-					<LinearLayout
-						android:orientation="vertical"
-						android:layout_width="match_parent"
-						android:layout_height="match_parent"
-						android:padding="5dp">
-
-						<LinearLayout
-							android:orientation="vertical"
-							android:layout_width="match_parent"
-							android:layout_height="match_parent"
-							android:layout_weight="0.5">
-
-							<com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:id="@+id/wizard_fragment_image_view"
-								android:src="@drawable/intro_screen1"
-								android:scaleType="centerCrop"/>
-
-						</LinearLayout>
-
-						<LinearLayout
-							android:orientation="vertical"
-							android:layout_width="match_parent"
-							android:layout_height="match_parent"
-							android:layout_weight="1.2">
-
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="Medium Text"
-								android:textStyle="bold"
-								android:id="@+id/fragment_wizard_title"
-								android:layout_gravity="center_horizontal"
-								android:gravity="center_horizontal"
-								android:layout_weight="1"
-								/>
-
-							<TextView
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="Sta je in een van onze stores en is jouw maat         niet op vooraad?         Scan and find dit artikel bij jou in de buurt!"
-								android:id="@+id/fragment_wizard_subtitle"
-								android:layout_gravity="center_vertical"
-								android:gravity="top|center_vertical|center_horizontal"
-								android:layout_weight="1" />
-						</LinearLayout>
-					</LinearLayout>
-
-
-				</android.support.v7.widget.CardView>
-
+						android:layout_height="wrap_content"
+						android:background="@android:color/white"
+						android:gravity="center"
+						android:text="LEER MÁS"/>
+				</LinearLayout>
 
 			</LinearLayout>
 

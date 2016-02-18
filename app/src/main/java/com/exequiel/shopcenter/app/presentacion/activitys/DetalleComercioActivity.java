@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
@@ -12,6 +14,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.exequiel.shopcenter.R;
+import com.exequiel.shopcenter.app.presentacion.adapters.CustomLinearLayoutManager;
+import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComentarioComercioAdapter;
+import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComercioAdapter;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -40,13 +45,49 @@ public class DetalleComercioActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_comercio);
 
-        //ViewPager
-        titlePageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
-        viewPager = (ViewPager) findViewById(R.id.pager);
-        wizardInicialAdapter = new WizardInicialAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(wizardInicialAdapter);
-        titlePageIndicator.setViewPager(viewPager);
-        //ViewPager
+        //RecyclerViewAdapter
+
+        DetalleComercioAdapter recyclerViewAdapter = new DetalleComercioAdapter();
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview1);
+        final CustomLinearLayoutManager layoutManager = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        // layoutManager = new LinearLayoutManager(this);
+        //final MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getScreenHeight(this));
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(recyclerViewAdapter);
+        recyclerView.setNestedScrollingEnabled(false);
+
+        DetalleComercioAdapter recyclerViewAdapter1 = new DetalleComercioAdapter();
+        RecyclerView recyclerView1 = (RecyclerView) findViewById(R.id.recyclerview2);
+        final CustomLinearLayoutManager layoutManager1 = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        // layoutManager = new LinearLayoutManager(this);
+        //final MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getScreenHeight(this));
+        recyclerView1.setLayoutManager(layoutManager1);
+        recyclerView1.setAdapter(recyclerViewAdapter1);
+        recyclerView1.setNestedScrollingEnabled(false);
+
+        DetalleComercioAdapter recyclerViewAdapter2 = new DetalleComercioAdapter();
+        RecyclerView recyclerView2 = (RecyclerView) findViewById(R.id.recyclerview3);
+        final CustomLinearLayoutManager layoutManager2 = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        // layoutManager = new LinearLayoutManager(this);
+        //final MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getScreenHeight(this));
+        recyclerView2.setLayoutManager(layoutManager2);
+        recyclerView2.setAdapter(recyclerViewAdapter2);
+        recyclerView2.setNestedScrollingEnabled(false);
+
+        DetalleComentarioComercioAdapter recyclerViewAdapter3 = new DetalleComentarioComercioAdapter();
+        RecyclerView recyclerView3 = (RecyclerView) findViewById(R.id.recyclerview4);
+        final CustomLinearLayoutManager layoutManager3 = new CustomLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        // layoutManager = new LinearLayoutManager(this);
+        //final MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getScreenHeight(this));
+        recyclerView3.setLayoutManager(layoutManager3);
+        recyclerView3.setAdapter(recyclerViewAdapter3);
+        recyclerView3.setNestedScrollingEnabled(false);
+
+        //RecyclerViewAdapter
 
         bindActivity();
 
