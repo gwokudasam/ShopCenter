@@ -1,0 +1,654 @@
+<!--suppress XmlUnusedNamespaceDeclaration -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:card_view="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:ignore="RtlHardcoded"
+	>
+
+	<android.support.design.widget.CoordinatorLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+
+		<android.support.design.widget.AppBarLayout
+			android:id="@+id/main.appbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+			>
+
+			<android.support.design.widget.CollapsingToolbarLayout
+				android:id="@+id/main.collapsing"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+				>
+
+				<ImageView
+					android:id="@+id/main.imageview.placeholder"
+					android:layout_width="match_parent"
+					android:layout_height="400dp"
+					android:scaleType="centerCrop"
+					android:src="@drawable/quila2"
+					android:tint="#11000000"
+					app:layout_collapseMode="parallax"
+					app:layout_collapseParallaxMultiplier="0.9"
+					/>
+	
+				<FrameLayout
+					android:id="@+id/main.framelayout.title"
+					android:layout_width="match_parent"
+					android:layout_height="100dp"
+					android:layout_gravity="bottom|center_horizontal"
+					android:background="@color/primary"
+					android:orientation="vertical"
+					app:layout_collapseMode="parallax"
+					app:layout_collapseParallaxMultiplier="0.3"
+
+					>
+	
+					<LinearLayout
+						android:id="@+id/main.linearlayout.title"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:orientation="vertical"
+						android:gravity="center">
+	
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center_horizontal"
+							android:gravity="bottom|center"
+							android:text="@string/quila_name"
+							android:textColor="#FFFFFFFF"
+							android:textSize="25sp"
+							/>
+	
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center_vertical"
+							android:layout_marginTop="2dp"
+							android:text="@string/quila_tagline"
+							android:textColor="#FFFFFFFF" />
+	
+					</LinearLayout>
+				</FrameLayout>
+			</android.support.design.widget.CollapsingToolbarLayout>
+		</android.support.design.widget.AppBarLayout>
+
+
+		<android.support.v4.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scrollbars="none"
+			app:behavior_overlapTop="25dp"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior"
+			>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<android.support.v7.widget.CardView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="8dp"
+					app:cardElevation="8dp"
+					app:contentPadding="5dp"
+					app:cardBackgroundColor="@android:color/white"
+					>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical"
+						android:gravity="center_horizontal">
+
+						<LinearLayout
+							android:orientation="horizontal"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content">
+
+							<Button
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:id="@+id/activity_gral_menu_home"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="como llegar"
+								android:drawableTop="@drawable/ic_account"
+								android:background="@android:color/white"
+								android:gravity="center_horizontal"
+								android:textSize="10dp"
+								android:paddingTop="8dp"
+								android:paddingBottom="8dp" />
+
+							<Button
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:id="@+id/activity_gral_menu_my_account"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="compartir"
+								android:drawableTop="@drawable/ic_account"
+								android:background="@android:color/white"
+								android:gravity="center_horizontal"
+								android:textSize="10dp"
+								android:layout_weight="0.98"
+								android:paddingTop="8dp"
+								android:paddingBottom="8dp" />
+
+							<Button
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:id="@+id/activity_gral_menu_scanner"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="contactar"
+								android:drawableTop="@drawable/ic_account"
+								android:background="@android:color/white"
+								android:gravity="center_horizontal"
+								android:textSize="10dp"
+								android:paddingTop="8dp"
+								android:paddingBottom="8dp" />
+
+							<Button
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:id="@+id/activity_gral_menu_shop"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="social"
+								android:drawableTop="@drawable/ic_account"
+								android:background="@android:color/white"
+								android:gravity="center_horizontal"
+								android:textSize="10dp"
+								android:paddingTop="8dp"
+								android:paddingBottom="8dp" />
+
+							<Button
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:id="@+id/activity_gral_menu_more"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="seguir"
+								android:drawableTop="@drawable/ic_account"
+								android:background="@android:color/white"
+								android:gravity="center_horizontal"
+								android:textSize="10dp"
+								android:paddingTop="8dp"
+								android:paddingBottom="8dp" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:padding="10dp"
+							>
+
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal"
+								android:gravity="center">
+
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:id="@+id/imageView1"
+									android:src="@drawable/ic_phone" />
+
+								<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textAppearance="?android:attr/textAppearanceSmall"
+									android:text="Dirección:"
+									android:padding="5dp"
+									android:id="@+id/textView1" />
+
+								<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textAppearance="?android:attr/textAppearanceSmall"
+									android:text="Bº Santa Cecilia 523"
+									android:padding="5dp"
+									android:id="@+id/textView11" />
+
+							</LinearLayout>
+
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal"
+								android:gravity="center">
+
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:id="@+id/imageView2"
+									android:src="@drawable/ic_phone" />
+
+								<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textAppearance="?android:attr/textAppearanceSmall"
+									android:text="Teléfonos:"
+									android:padding="5dp"
+									android:id="@+id/textView2" />
+
+								<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textAppearance="?android:attr/textAppearanceSmall"
+									android:text="351-12345678"
+									android:padding="5dp"
+									android:id="@+id/textView22" />
+
+							</LinearLayout>
+
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal"
+								android:gravity="center">
+
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:id="@+id/imageView3"
+									android:src="@drawable/ic_phone" />
+
+								<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textAppearance="?android:attr/textAppearanceSmall"
+									android:text="Web:"
+									android:padding="5dp"
+									android:id="@+id/textView3" />
+
+								<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textAppearance="?android:attr/textAppearanceSmall"
+									android:text="wwww.prueba.com"
+									android:padding="5dp"
+									android:id="@+id/textView33" />
+
+							</LinearLayout>
+
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal"
+								android:gravity="center">
+
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:id="@+id/imageView4"
+									android:src="@drawable/ic_phone" />
+
+								<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textAppearance="?android:attr/textAppearanceSmall"
+									android:text="Email:"
+									android:padding="5dp"
+									android:id="@+id/textView4" />
+
+								<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textAppearance="?android:attr/textAppearanceSmall"
+									android:text="email@gmail.com"
+									android:padding="5dp"
+									android:id="@+id/textView44" />
+
+							</LinearLayout>
+
+						</LinearLayout>
+
+
+					</LinearLayout>
+
+				</android.support.v7.widget.CardView>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginLeft="10dp"
+					android:text="Ultimas publicaciones"
+					/>
+
+				<android.support.v7.widget.CardView
+					android:layout_width="match_parent"
+					android:layout_height="200dp"
+					android:layout_marginTop="5dp"
+					app:cardElevation="0dp"
+					app:contentPadding="5dp"
+					app:cardBackgroundColor="@android:color/white">
+
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent">
+
+						<android.support.v4.view.ViewPager
+							android:id="@+id/pager"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1" />
+
+						<com.viewpagerindicator.CirclePageIndicator
+							android:id="@+id/indicator"
+							android:padding="10dip"
+							android:layout_height="wrap_content"
+							android:layout_width="match_parent"
+							app:radius="4dp"
+							app:fillColor="#85BF45"
+							app:pageColor="@android:color/transparent"
+							app:strokeColor="#85BF45"
+							app:strokeWidth="1dp"
+							android:visibility="gone"
+							/>
+					</LinearLayout>
+
+				</android.support.v7.widget.CardView>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginLeft="10dp"
+					android:text="Publicaciones"
+					/>
+
+				<android.support.v7.widget.CardView
+					android:layout_width="match_parent"
+					android:layout_height="400dp"
+					android:layout_marginTop="5dp"
+					app:cardElevation="0dp"
+					app:contentPadding="5dp"
+					app:cardBackgroundColor="@android:color/white">
+
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:padding="5dp">
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="0.5">
+
+							<TextView
+								android:id="@+id/titulo_publicacion"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="10dp"
+								android:layout_marginLeft="10dp"
+								android:textColor="@android:color/black"
+								android:text="Aprovechá con todo el verano!!!"
+								/>
+
+							<FrameLayout
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:clipChildren="false"
+								>
+
+								<com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:layout_marginTop="10dp"
+									android:padding="10dp"
+									android:id="@+id/wizard_fragment_image_view1"
+									android:src="@drawable/intro_screen1"
+									android:scaleType="centerCrop"/>
+
+								<com.exequiel.shopcenter.componentes.LobsterTextView
+									android:id="@+id/item_movie_title"
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_marginLeft="10dp"
+									android:layout_marginRight="10dp"
+									android:paddingBottom="@dimen/activity_vertical_margin"
+									android:paddingLeft="50dp"
+									android:paddingRight="50dp"
+									android:paddingTop="@dimen/activity_vertical_margin"
+									android:background="#AA000000"
+									android:maxLines="2"
+									android:ellipsize="end"
+									android:textColor="@android:color/white"
+									android:layout_gravity="bottom"
+									android:gravity="bottom"
+									tools:text="Holaaaa"
+									android:textSize="40sp"
+									/>
+
+							</FrameLayout>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1.2">
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="Medium Text"
+								android:textStyle="bold"
+								android:id="@+id/fragment_wizard_title1"
+								android:layout_gravity="center_horizontal"
+								android:gravity="center_horizontal"
+								android:layout_weight="1"
+								/>
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="Sta je in een van onze stores en is jouw maat         niet op vooraad?         Scan and find dit artikel bij jou in de buurt!"
+								android:id="@+id/fragment_wizard_subtitle5"
+								android:layout_gravity="center_vertical"
+								android:gravity="top|center_vertical|center_horizontal"
+								android:layout_weight="1" />
+						</LinearLayout>
+					</LinearLayout>
+
+
+				</android.support.v7.widget.CardView>
+
+				<android.support.v7.widget.CardView
+					android:layout_width="match_parent"
+					android:layout_height="400dp"
+					android:layout_marginTop="5dp"
+					app:cardElevation="0dp"
+					app:contentPadding="5dp"
+					app:cardBackgroundColor="@android:color/white">
+
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:padding="5dp">
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="0.5">
+
+							<com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/wizard_fragment_image_view2"
+								android:src="@drawable/intro_screen1"
+								android:scaleType="centerCrop"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1.2">
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="Medium Text"
+								android:textStyle="bold"
+								android:id="@+id/fragment_wizard_title2"
+								android:layout_gravity="center_horizontal"
+								android:gravity="center_horizontal"
+								android:layout_weight="1"
+								/>
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="Sta je in een van onze stores en is jouw maat         niet op vooraad?         Scan and find dit artikel bij jou in de buurt!"
+								android:id="@+id/fragment_wizard_subtitle1"
+								android:layout_gravity="center_vertical"
+								android:gravity="top|center_vertical|center_horizontal"
+								android:layout_weight="1" />
+						</LinearLayout>
+					</LinearLayout>
+
+
+				</android.support.v7.widget.CardView>
+
+
+				<android.support.v7.widget.CardView
+					android:layout_width="match_parent"
+					android:layout_height="400dp"
+					android:layout_marginTop="5dp"
+					app:cardElevation="0dp"
+					app:contentPadding="5dp"
+					app:cardBackgroundColor="@android:color/white">
+
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:padding="5dp">
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="0.5">
+
+							<com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/wizard_fragment_image_view"
+								android:src="@drawable/intro_screen1"
+								android:scaleType="centerCrop"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1.2">
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="Medium Text"
+								android:textStyle="bold"
+								android:id="@+id/fragment_wizard_title"
+								android:layout_gravity="center_horizontal"
+								android:gravity="center_horizontal"
+								android:layout_weight="1"
+								/>
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="Sta je in een van onze stores en is jouw maat         niet op vooraad?         Scan and find dit artikel bij jou in de buurt!"
+								android:id="@+id/fragment_wizard_subtitle"
+								android:layout_gravity="center_vertical"
+								android:gravity="top|center_vertical|center_horizontal"
+								android:layout_weight="1" />
+						</LinearLayout>
+					</LinearLayout>
+
+
+				</android.support.v7.widget.CardView>
+
+
+			</LinearLayout>
+
+
+		</android.support.v4.widget.NestedScrollView>
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/main.toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="@color/primary"
+			app:layout_anchor="@id/main.framelayout.title"
+			app:theme="@style/ThemeOverlay.AppCompat.Dark"
+			app:title=""
+			>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:orientation="horizontal"
+				>
+
+				<Space
+					android:layout_width="@dimen/image_final_width"
+					android:layout_height="@dimen/image_final_width"
+					/>
+
+				<TextView
+					android:id="@+id/main.textview.title"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="8dp"
+					android:text="@string/quila_name2"
+					android:textColor="#FFFFFFFF"
+					android:textSize="20sp"
+					android:gravity="center" />
+
+			</LinearLayout>
+		</android.support.v7.widget.Toolbar>
+
+		<de.hdodenhof.circleimageview.CircleImageView
+			android:layout_width="@dimen/image_width"
+			android:layout_height="@dimen/image_width"
+			android:layout_gravity="center"
+			android:src="@drawable/quila"
+			app:border_color="@android:color/white"
+			app:border_width="2dp"
+			app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
+			android:visibility="visible" />
+
+	</android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

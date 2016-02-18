@@ -8,7 +8,7 @@ android {
     defaultConfig {
         applicationId "com.exequiel.shopcenter"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 14
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -19,12 +19,26 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        incremental true
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
+    //dependencias material design
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:palette-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+
+
+    //Imagen circular
+    compile 'de.hdodenhof:circleimageview:1.3.0'
 
     //dependencia para GCM
     compile 'com.google.android.gms:play-services:+'

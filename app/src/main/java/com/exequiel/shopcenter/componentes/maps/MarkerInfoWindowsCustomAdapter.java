@@ -3,7 +3,7 @@ package com.exequiel.shopcenter.componentes.maps;
 import android.app.Activity;
 import android.view.View;
 
-import com.exequiel.shopcenter.androidframework.ui.adapter.BaseHolder;
+import com.exequiel.shopcenter.framework.ui.adapter.BaseHolder;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
 
