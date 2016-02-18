@@ -89,6 +89,7 @@
 			android:layout_height="match_parent"
 			android:scrollbars="vertical"
 			app:behavior_overlapTop="30dp"
+			android:id="@+id/nestedScrollView111"
 			app:layout_behavior="@string/appbar_scrolling_view_behavior"
 			>
 
@@ -299,6 +300,29 @@
 
 							</LinearLayout>
 
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal"
+								android:gravity="center">
+
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:id="@+id/imageView4"
+									android:src="@drawable/ic_phone" />
+
+
+								<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textAppearance="?android:attr/textAppearanceSmall"
+									android:text="Se reciben tarjetas de crédito"
+									android:padding="5dp"
+									android:id="@+id/textView44" />
+
+							</LinearLayout>
+
 						</LinearLayout>
 
 
@@ -399,13 +423,15 @@
 						android:background="@android:color/white"
 						android:paddingTop="0dp"/>
 
-					<TextView
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:background="@android:color/white"
-						android:gravity="center"
-						android:text="LEER MÁS"/>
 				</LinearLayout>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="10dp"
+					android:text="Ver más"
+					android:gravity="center"
+					/>
 
 			</LinearLayout>
 
@@ -455,6 +481,44 @@
 			app:border_width="2dp"
 			app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
 			android:visibility="visible" />
+
+		<com.sa90.materialarcmenu.ArcMenu
+			android:id="@+id/arcMenu"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom|end"
+			app:menu_open="arc_left"
+			app:menu_color="@color/primary"
+			app:menu_radius="150dp"
+			app:menu_scr="@android:drawable/ic_dialog_dialer">
+
+			<android.support.design.widget.FloatingActionButton
+				android:id="@+id/fab1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@android:drawable/ic_dialog_email" />
+
+			<android.support.design.widget.FloatingActionButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@android:drawable/ic_dialog_alert" />
+
+			<android.support.design.widget.FloatingActionButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@android:drawable/ic_dialog_info" />
+
+			<android.support.design.widget.FloatingActionButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@android:drawable/ic_dialog_map" />
+
+			<android.support.design.widget.FloatingActionButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@android:drawable/ic_dialog_email" />
+
+		</com.sa90.materialarcmenu.ArcMenu>
 
 	</android.support.design.widget.CoordinatorLayout>
 

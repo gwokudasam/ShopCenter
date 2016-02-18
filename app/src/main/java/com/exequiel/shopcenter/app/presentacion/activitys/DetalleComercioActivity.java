@@ -3,6 +3,7 @@ package com.exequiel.shopcenter.app.presentacion.activitys;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,7 +22,7 @@ import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.viewpagerindicator.CirclePageIndicator;
 
 public class DetalleComercioActivity extends AppCompatActivity
-    implements AppBarLayout.OnOffsetChangedListener {
+    implements AppBarLayout.OnOffsetChangedListener{
 
     private static final float PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR  = 0.9f;
     private static final float PERCENTAGE_TO_HIDE_TITLE_DETAILS     = 0.3f;
@@ -94,7 +95,9 @@ public class DetalleComercioActivity extends AppCompatActivity
         mToolbar.setTitle("");
         mAppBarLayout.addOnOffsetChangedListener(this);
 
+
         setSupportActionBar(mToolbar);
+
         startAlphaAnimation(mTitle, 0, View.INVISIBLE);
     }
 
