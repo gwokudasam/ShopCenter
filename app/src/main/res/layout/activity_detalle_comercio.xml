@@ -33,7 +33,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="400dp"
 					android:scaleType="centerCrop"
-					android:src="@drawable/quila2"
+					android:src="@drawable/img7845"
 					android:tint="#11000000"
 					app:layout_collapseMode="parallax"
 					app:layout_collapseParallaxMultiplier="0.9"
@@ -117,77 +117,53 @@
 							android:orientation="horizontal"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:id="@+id/linearLayout1">
+							android:id="@+id/linearLayout1"
+							android:layout_gravity="center_vertical">
 
-							<Button
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:layout_weight="1"
-								android:id="@+id/activity_gral_menu_home"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="como llegar"
-								android:drawableTop="@drawable/ic_account"
-								android:background="@android:color/white"
-								android:gravity="center_horizontal"
-								android:textSize="10dp"
-								android:paddingTop="8dp"
-								android:paddingBottom="8dp" />
-
-							<Button
+							<LinearLayout
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:id="@+id/activity_gral_menu_my_account"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="compartir"
-								android:drawableTop="@drawable/ic_account"
-								android:background="@android:color/white"
-								android:gravity="center_horizontal"
-								android:textSize="10dp"
-								android:layout_weight="0.98"
-								android:paddingTop="8dp"
-								android:paddingBottom="8dp" />
+								android:orientation="horizontal"
+								android:layout_toRightOf="@+id/imagen"
+								android:layout_gravity="center_vertical"
+								android:gravity="center">
 
-							<Button
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:layout_weight="1"
-								android:id="@+id/activity_gral_menu_scanner"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="contactar"
-								android:drawableTop="@drawable/ic_account"
-								android:background="@android:color/white"
-								android:gravity="center_horizontal"
-								android:textSize="10dp"
-								android:paddingTop="8dp"
-								android:paddingBottom="8dp" />
+								<ImageView
+									android:layout_width="35dp"
+									android:layout_height="35dp"
+									android:layout_alignParentBottom="true"
+									android:layout_alignParentRight="true"
+									android:src="@android:drawable/star_off" />
 
-							<Button
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:layout_weight="1"
-								android:id="@+id/activity_gral_menu_shop"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="social"
-								android:drawableTop="@drawable/ic_account"
-								android:background="@android:color/white"
-								android:gravity="center_horizontal"
-								android:textSize="10dp"
-								android:paddingTop="8dp"
-								android:paddingBottom="8dp" />
+								<ImageView
+									android:layout_width="35dp"
+									android:layout_height="35dp"
+									android:layout_alignParentBottom="true"
+									android:layout_alignParentRight="true"
+									android:src="@android:drawable/star_off" />
 
-							<Button
-								android:layout_width="match_parent"
-								android:layout_height="match_parent"
-								android:layout_weight="1"
-								android:id="@+id/activity_gral_menu_more"
-								android:textAppearance="?android:attr/textAppearanceSmall"
-								android:text="seguir"
-								android:drawableTop="@drawable/ic_account"
-								android:background="@android:color/white"
-								android:gravity="center_horizontal"
-								android:textSize="10dp"
-								android:paddingTop="8dp"
-								android:paddingBottom="8dp" />
+								<ImageView
+									android:layout_width="35dp"
+									android:layout_height="35dp"
+									android:layout_alignParentBottom="true"
+									android:layout_alignParentRight="true"
+									android:src="@android:drawable/star_off" />
+
+								<ImageView
+									android:layout_width="35dp"
+									android:layout_height="35dp"
+									android:layout_alignParentBottom="true"
+									android:layout_alignParentRight="true"
+									android:src="@android:drawable/star_off" />
+
+								<ImageView
+									android:layout_width="35dp"
+									android:layout_height="35dp"
+									android:layout_alignParentBottom="true"
+									android:layout_alignParentRight="true"
+									android:src="@android:drawable/star_off" />
+
+							</LinearLayout>
 						</LinearLayout>
 
 						<View
@@ -336,13 +312,35 @@
 					android:orientation="vertical"
 					android:layout_marginTop="7dp"
 					android:layout_marginBottom="7dp">
-					<TextView
+
+					<RelativeLayout
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="25dp"
+						android:orientation="horizontal"
 						android:layout_marginTop="20dp"
 						android:layout_marginLeft="10dp"
-						android:text="Promoción y ofertas"
-						/>
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="10dp">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:text="Promoción y ofertas"
+							android:layout_alignParentLeft="true"
+							android:gravity="bottom"
+							android:id="@+id/textView3" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Ver más"
+							android:gravity="right"
+							android:background="#3a3a3a"
+							android:textColor="#ffffff"
+							android:padding="5dp"
+							android:layout_alignParentRight="true"
+							android:id="@+id/textView53" />
+					</RelativeLayout>
 
 					<android.support.v7.widget.RecyclerView
 						android:id="@+id/recyclerview1"
@@ -359,13 +357,35 @@
 				android:orientation="vertical"
 				android:layout_marginTop="5dp"
 				android:layout_marginBottom="5dp">
-				<TextView
+
+				<RelativeLayout
 					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
+					android:layout_height="25dp"
+					android:orientation="horizontal"
 					android:layout_marginTop="20dp"
 					android:layout_marginLeft="10dp"
-					android:text="Cupones y vouchers"
-					/>
+					android:layout_marginRight="10dp"
+					android:layout_marginBottom="10dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:text="Promoción y ofertas"
+						android:layout_alignParentLeft="true"
+						android:gravity="bottom"
+						android:id="@+id/textView2" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Ver más"
+						android:gravity="right"
+						android:background="#3a3a3a"
+						android:textColor="#ffffff"
+						android:padding="5dp"
+						android:layout_alignParentRight="true"
+						android:id="@+id/textView52" />
+				</RelativeLayout>
 
 				<android.support.v7.widget.RecyclerView
 					android:id="@+id/recyclerview2"
@@ -382,13 +402,36 @@
 				android:orientation="vertical"
 				android:layout_marginTop="5dp"
 				android:layout_marginBottom="5dp">
-				<TextView
+
+				<RelativeLayout
 					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
+					android:layout_height="25dp"
+					android:orientation="horizontal"
 					android:layout_marginTop="20dp"
 					android:layout_marginLeft="10dp"
-					android:text="Sorteos"
-					/>
+					android:layout_marginRight="10dp"
+					android:layout_marginBottom="10dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:text="Promoción y ofertas"
+						android:layout_alignParentLeft="true"
+						android:gravity="bottom"
+						android:id="@+id/textView1" />
+
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Ver más"
+						android:gravity="right"
+						android:background="#3a3a3a"
+						android:textColor="#ffffff"
+						android:padding="5dp"
+						android:layout_alignParentRight="true"
+						android:id="@+id/textView51" />
+				</RelativeLayout>
 
 				<android.support.v7.widget.RecyclerView
 					android:id="@+id/recyclerview3"
@@ -405,14 +448,24 @@
 					android:orientation="vertical"
 					android:layout_marginTop="5dp"
 					android:layout_marginBottom="5dp">
-					<TextView
+
+					<RelativeLayout
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="25dp"
+						android:orientation="horizontal"
 						android:layout_marginTop="20dp"
 						android:layout_marginLeft="10dp"
-						android:layout_marginBottom="10dp"
-						android:text="Comentarios"
-						/>
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="10dp">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:text="Comentarios"
+							android:layout_alignParentLeft="true"
+							android:gravity="bottom"
+							android:id="@+id/textView" />
+					</RelativeLayout>
 
 					<android.support.v7.widget.RecyclerView
 						android:id="@+id/recyclerview4"
@@ -451,8 +504,7 @@
 			<LinearLayout
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
-				android:orientation="horizontal"
-				>
+				android:orientation="horizontal">
 
 				<Space
 					android:layout_width="@dimen/image_final_width"
@@ -476,49 +528,101 @@
 			android:layout_width="@dimen/image_width"
 			android:layout_height="@dimen/image_width"
 			android:layout_gravity="center"
-			android:src="@drawable/quila"
+			android:src="@drawable/images"
 			app:border_color="@android:color/white"
-			app:border_width="2dp"
+			app:border_width="1dp"
 			app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
+			android:id="@+id/circle_image_view"
 			android:visibility="visible" />
 
-		<com.sa90.materialarcmenu.ArcMenu
-			android:id="@+id/arcMenu"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_gravity="bottom|end"
-			app:menu_open="arc_left"
-			app:menu_color="@color/primary"
-			app:menu_radius="150dp"
-			app:menu_scr="@android:drawable/ic_dialog_dialer">
+		<com.github.clans.fab.FloatingActionMenu
+			android:id="@+id/menu1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:paddingRight="10dp"
+			android:paddingBottom="10dp"
+			android:paddingLeft="10dp"
+			app:menu_labels_ellipsize="end"
+			app:menu_labels_singleLine="true"
+			app:menu_backgroundColor="@color/color_negro_transparente"
+			app:menu_colorNormal="@color/primary"
+			app:menu_colorPressed="#2E7D32"
+			app:menu_colorRipple="#1B5E20"
+			app:menu_labels_showShadow="false"
+			app:menu_labels_colorNormal="@android:color/transparent"
+			app:menu_labels_colorPressed="@android:color/transparent"
+			app:menu_labels_colorRipple="@android:color/transparent">
 
-			<android.support.design.widget.FloatingActionButton
+			<com.github.clans.fab.FloatingActionButton
 				android:id="@+id/fab1"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@android:drawable/ic_dialog_email" />
+				android:src="@drawable/ic_call_white_18dp"
+				app:fab_size="mini"
+				app:fab_label="Contactar"
+				app:fab_colorNormal="@color/primary"
+				app:fab_colorPressed="#2E7D32"
+				app:fab_colorRipple="#1B5E20"/>
 
-			<android.support.design.widget.FloatingActionButton
+			<com.github.clans.fab.FloatingActionButton
+				android:id="@+id/fab2"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@android:drawable/ic_dialog_alert" />
+				android:src="@drawable/ic_location_on_white_18dp"
+				app:fab_size="mini"
+				app:fab_label="Como llegar"
+				app:fab_colorNormal="@color/primary"
+				app:fab_colorPressed="#2E7D32"
+				app:fab_colorRipple="#1B5E20"/>
 
-			<android.support.design.widget.FloatingActionButton
+			<com.github.clans.fab.FloatingActionButton
+				android:id="@+id/fab3"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@android:drawable/ic_dialog_info" />
+				android:src="@drawable/ic_group_white_18dp"
+				app:fab_size="mini"
+				app:fab_label="Redes sociales"
+				app:fab_colorNormal="@color/primary"
+				app:fab_colorPressed="#2E7D32"
+				app:fab_colorRipple="#1B5E20"/>
 
-			<android.support.design.widget.FloatingActionButton
+			<com.github.clans.fab.FloatingActionButton
+				android:id="@+id/fab4"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@android:drawable/ic_dialog_map" />
+				android:src="@drawable/ic_rss_feed_white_18dp"
+				app:fab_size="mini"
+				app:fab_label="Seguir comercio"
+				app:fab_colorNormal="@color/primary"
+				app:fab_colorPressed="#2E7D32"
+				app:fab_colorRipple="#1B5E20"/>
 
-			<android.support.design.widget.FloatingActionButton
+			<com.github.clans.fab.FloatingActionButton
+				android:id="@+id/fab5"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@android:drawable/ic_dialog_email" />
+				android:src="@drawable/ic_chat_white_18dp"
+				app:fab_size="mini"
+				app:fab_label="Recomendar"
+				app:fab_colorNormal="@color/primary"
+				app:fab_colorPressed="#2E7D32"
+				app:fab_colorRipple="#1B5E20"/>
 
-		</com.sa90.materialarcmenu.ArcMenu>
+			<com.github.clans.fab.FloatingActionButton
+				android:id="@+id/fab6"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_sentiment_satisfied_white_18dp"
+				app:fab_size="mini"
+				app:fab_label="Puntuar"
+				app:fab_colorNormal="@color/primary"
+				app:fab_colorPressed="#2E7D32"
+				app:fab_colorRipple="#1B5E20"/>
+
+		</com.github.clans.fab.FloatingActionMenu>
+
 
 	</android.support.design.widget.CoordinatorLayout>
 

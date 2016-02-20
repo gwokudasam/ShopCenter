@@ -8,21 +8,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.exequiel.shopcenter.R;
+import com.exequiel.shopcenter.app.presentacion.adapters.AvisosComercioAdapter;
 import com.exequiel.shopcenter.app.presentacion.adapters.CustomLinearLayoutManager;
 import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComentarioComercioAdapter;
 import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComercioAdapter;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
+import com.github.clans.fab.FloatingActionMenu;
+import com.sa90.materialarcmenu.ArcMenu;
 import com.viewpagerindicator.CirclePageIndicator;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class DetalleComercioActivity extends AppCompatActivity
-    implements AppBarLayout.OnOffsetChangedListener{
+    implements AppBarLayout.OnOffsetChangedListener, View.OnTouchListener {
 
     private static final float PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR  = 0.9f;
     private static final float PERCENTAGE_TO_HIDE_TITLE_DETAILS     = 0.3f;
@@ -35,20 +43,35 @@ public class DetalleComercioActivity extends AppCompatActivity
     private TextView mTitle;
     private AppBarLayout mAppBarLayout;
     private Toolbar mToolbar;
+    private NestedScrollView nestedScrollView;
+    private CircleImageView circleImageView;
 
+    FloatingActionMenu menu;
     //ViewPager
     CirclePageIndicator titlePageIndicator;
     ViewPager viewPager;
     WizardInicialAdapter wizardInicialAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_comercio);
 
+        menu = (FloatingActionMenu) findViewById(R.id.menu1);
+
+        /*//ViewPager
+        titlePageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
+        viewPager = (ViewPager) findViewById(R.id.pager);
+        wizardInicialAdapter = new WizardInicialAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(wizardInicialAdapter);
+        titlePageIndicator.setViewPager(viewPager);
+        //ViewPager
+        */
+
         //RecyclerViewAdapter
 
-        DetalleComercioAdapter recyclerViewAdapter = new DetalleComercioAdapter();
+        AvisosComercioAdapter recyclerViewAdapter = new AvisosComercioAdapter();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview1);
         final CustomLinearLayoutManager layoutManager = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -94,11 +117,13 @@ public class DetalleComercioActivity extends AppCompatActivity
 
         mToolbar.setTitle("");
         mAppBarLayout.addOnOffsetChangedListener(this);
-
-
         setSupportActionBar(mToolbar);
-
         startAlphaAnimation(mTitle, 0, View.INVISIBLE);
+
+        mAppBarLayout.setOnTouchListener(this);
+        nestedScrollView.setOnTouchListener(this);
+        mToolbar.setOnTouchListener(this);
+        circleImageView.setOnTouchListener(this);
     }
 
     private void bindActivity() {
@@ -106,6 +131,8 @@ public class DetalleComercioActivity extends AppCompatActivity
         mTitle          = (TextView) findViewById(R.id.main_textview_title);
         mTitleContainer = (LinearLayout) findViewById(R.id.main_linearlayout_title);
         mAppBarLayout   = (AppBarLayout) findViewById(R.id.main_appbar);
+        nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView111);
+        circleImageView = (CircleImageView) findViewById(R.id.circle_image_view);
     }
 
     @Override
@@ -118,7 +145,6 @@ public class DetalleComercioActivity extends AppCompatActivity
     public void onOffsetChanged(AppBarLayout appBarLayout, int offset) {
         int maxScroll = appBarLayout.getTotalScrollRange();
         float percentage = (float) Math.abs(offset) / (float) maxScroll;
-
         handleAlphaOnTitle(percentage);
         handleToolbarTitleVisibility(percentage);
     }
@@ -164,5 +190,17 @@ public class DetalleComercioActivity extends AppCompatActivity
         alphaAnimation.setDuration(duration);
         alphaAnimation.setFillAfter(true);
         v.startAnimation(alphaAnimation);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        if (menu.isOpened())
+            menu.close(true);
+        return false;
     }
 }

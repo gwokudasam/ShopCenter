@@ -20,8 +20,8 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:src="@drawable/quila"
-            app:border_color="@android:color/white"
-            app:border_width="2dp"
+            app:border_color="#8BC34A"
+            app:border_width="1dp"
             app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
             android:id="@+id/imagen"
             android:visibility="visible" />
@@ -44,7 +44,8 @@
                 android:text="Julio Exequiel zeballos"
                 android:id="@+id/nombre"
                 android:layout_alignParentTop="true"
-                android:textSize="12dp" />
+                android:textSize="12dp"
+                android:textColor="@android:color/black"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -117,7 +118,8 @@
                 android:id="@+id/txt_comentario"
                 android:text="La atención que brinda es muy buena, y no hay que dejar propina!!! Lo único que cambiaría es que realizen pedidos a domicilio por que no realizan este tipo de servicio aún."
                 android:layout_alignParentTop="true"
-                android:textSize="12dp" />
+                android:textSize="12dp"
+                android:textColor="#757575"/>
 
         </LinearLayout>
 

@@ -5,4 +5,6 @@
     <color name="primaryDark">#FF47B612</color>
     <color name="colorAccent">#FF4081</color>
     <color name="verde">#FF24C065</color>
+    <color name="color_negro_transparente">#DC000000</color>
+
 </resources>
