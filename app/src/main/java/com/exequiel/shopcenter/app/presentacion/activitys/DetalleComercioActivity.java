@@ -60,18 +60,10 @@ public class DetalleComercioActivity extends AppCompatActivity
 
         menu = (FloatingActionMenu) findViewById(R.id.menu1);
 
-        /*//ViewPager
-        titlePageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
-        viewPager = (ViewPager) findViewById(R.id.pager);
-        wizardInicialAdapter = new WizardInicialAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(wizardInicialAdapter);
-        titlePageIndicator.setViewPager(viewPager);
-        //ViewPager
-        */
 
         //RecyclerViewAdapter
 
-        AvisosComercioAdapter recyclerViewAdapter = new AvisosComercioAdapter();
+        /*AvisosComercioAdapter recyclerViewAdapter = new AvisosComercioAdapter();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview1);
         final CustomLinearLayoutManager layoutManager = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -79,7 +71,7 @@ public class DetalleComercioActivity extends AppCompatActivity
         //final MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getScreenHeight(this));
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
-        recyclerView.setNestedScrollingEnabled(false);
+        recyclerView.setNestedScrollingEnabled(false);*/
 
         DetalleComercioAdapter recyclerViewAdapter1 = new DetalleComercioAdapter();
         RecyclerView recyclerView1 = (RecyclerView) findViewById(R.id.recyclerview2);
@@ -124,6 +116,15 @@ public class DetalleComercioActivity extends AppCompatActivity
         nestedScrollView.setOnTouchListener(this);
         mToolbar.setOnTouchListener(this);
         circleImageView.setOnTouchListener(this);
+
+        //ViewPager
+        titlePageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
+        viewPager = (ViewPager) findViewById(R.id.pager);
+        wizardInicialAdapter = new WizardInicialAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(wizardInicialAdapter);
+        titlePageIndicator.setViewPager(viewPager);
+        //ViewPager
+
     }
 
     private void bindActivity() {

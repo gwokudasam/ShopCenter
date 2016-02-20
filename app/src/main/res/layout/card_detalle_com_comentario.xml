@@ -21,7 +21,7 @@
             android:layout_gravity="center"
             android:src="@drawable/quila"
             app:border_color="#8BC34A"
-            app:border_width="1dp"
+            app:border_width="0.5dp"
             app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
             android:id="@+id/imagen"
             android:visibility="visible" />
@@ -44,8 +44,7 @@
                 android:text="Julio Exequiel zeballos"
                 android:id="@+id/nombre"
                 android:layout_alignParentTop="true"
-                android:textSize="12dp"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,8 +95,7 @@
                     android:text="18/02/2016"
                     android:id="@+id/visitas"
                     android:layout_below="@+id/nombre"
-                    android:layout_alignLeft="@+id/nombre"
-                    android:textSize="12dp" />
+                    android:layout_alignLeft="@+id/nombre" />
 
             </LinearLayout>
 
@@ -107,8 +105,7 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_marginTop="10dp"
                 android:text="Muy buen comercio para comprar comida"
-                android:layout_alignParentTop="true"
-                android:textSize="12dp" />
+                android:layout_alignParentTop="true" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -118,7 +115,6 @@
                 android:id="@+id/txt_comentario"
                 android:text="La atención que brinda es muy buena, y no hay que dejar propina!!! Lo único que cambiaría es que realizen pedidos a domicilio por que no realizan este tipo de servicio aún."
                 android:layout_alignParentTop="true"
-                android:textSize="12dp"
                 android:textColor="#757575"/>
 
         </LinearLayout>

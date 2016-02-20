@@ -104,6 +104,7 @@
 					android:layout_height="wrap_content"
 					android:layout_margin="8dp"
 					app:contentPadding="5dp"
+					app:cardElevation="1dp"
 					app:cardBackgroundColor="@android:color/white"
 					>
 
@@ -114,192 +115,292 @@
 						android:gravity="center_horizontal">
 
 						<LinearLayout
-							android:orientation="horizontal"
+							android:orientation="vertical"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
 							android:id="@+id/linearLayout1"
 							android:layout_gravity="center_vertical">
 
 							<LinearLayout
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"
 								android:orientation="horizontal"
-								android:layout_toRightOf="@+id/imagen"
-								android:layout_gravity="center_vertical"
-								android:gravity="center">
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_marginBottom="2dp">
 
-								<ImageView
-									android:layout_width="35dp"
-									android:layout_height="35dp"
-									android:layout_alignParentBottom="true"
-									android:layout_alignParentRight="true"
-									android:src="@android:drawable/star_off" />
+								<LinearLayout
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:layout_toRightOf="@+id/imagen"
+									android:layout_gravity="center_vertical"
+									android:gravity="center"
+									android:layout_weight="1">
 
-								<ImageView
-									android:layout_width="35dp"
-									android:layout_height="35dp"
-									android:layout_alignParentBottom="true"
-									android:layout_alignParentRight="true"
-									android:src="@android:drawable/star_off" />
+									<ImageView
+										android:layout_width="25dp"
+										android:layout_height="25dp"
+										android:layout_alignParentBottom="true"
+										android:layout_alignParentRight="true"
+										android:src="@android:drawable/star_off" />
 
-								<ImageView
-									android:layout_width="35dp"
-									android:layout_height="35dp"
-									android:layout_alignParentBottom="true"
-									android:layout_alignParentRight="true"
-									android:src="@android:drawable/star_off" />
+									<ImageView
+										android:layout_width="25dp"
+										android:layout_height="25dp"
+										android:layout_alignParentBottom="true"
+										android:layout_alignParentRight="true"
+										android:src="@android:drawable/star_off" />
 
-								<ImageView
-									android:layout_width="35dp"
-									android:layout_height="35dp"
-									android:layout_alignParentBottom="true"
-									android:layout_alignParentRight="true"
-									android:src="@android:drawable/star_off" />
+									<ImageView
+										android:layout_width="25dp"
+										android:layout_height="25dp"
+										android:layout_alignParentBottom="true"
+										android:layout_alignParentRight="true"
+										android:src="@android:drawable/star_off" />
 
-								<ImageView
-									android:layout_width="35dp"
-									android:layout_height="35dp"
-									android:layout_alignParentBottom="true"
-									android:layout_alignParentRight="true"
-									android:src="@android:drawable/star_off" />
+									<ImageView
+										android:layout_width="25dp"
+										android:layout_height="25dp"
+										android:layout_alignParentBottom="true"
+										android:layout_alignParentRight="true"
+										android:src="@android:drawable/star_off" />
+
+									<ImageView
+										android:layout_width="25dp"
+										android:layout_height="25dp"
+										android:layout_alignParentBottom="true"
+										android:layout_alignParentRight="true"
+										android:src="@android:drawable/star_off" />
+
+								</LinearLayout>
+
+								<LinearLayout
+									android:orientation="horizontal"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:gravity="center_horizontal"
+									android:paddingBottom="5dp"
+									android:layout_weight="1">
+
+									<LinearLayout
+										android:orientation="vertical"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_marginLeft="12dp">
+
+										<TextView
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:textAppearance="?android:attr/textAppearanceSmall"
+											android:text="500"
+											android:id="@+id/textView6"
+											android:layout_gravity="center_horizontal"
+											android:textStyle="bold"
+											android:textSize="20sp" />
+
+										<TextView
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:textAppearance="?android:attr/textAppearanceSmall"
+											android:text="Seguidores"
+											android:id="@+id/textView7" />
+									</LinearLayout>
+
+									<LinearLayout
+										android:orientation="vertical"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_marginLeft="12dp">
+
+										<TextView
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:textAppearance="?android:attr/textAppearanceSmall"
+											android:text="500"
+											android:id="@+id/textView8"
+											android:layout_gravity="center_horizontal"
+											android:textStyle="bold"
+											android:textSize="20sp" />
+
+										<TextView
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:textAppearance="?android:attr/textAppearanceSmall"
+											android:text="Publicaciones"
+											android:id="@+id/textView9" />
+									</LinearLayout>
+								</LinearLayout>
 
 							</LinearLayout>
+
 						</LinearLayout>
 
 						<View
 							android:layout_width="wrap_content"
-							android:layout_height="1dp"
+							android:layout_height="0.5dp"
 							android:background="#ffd5d5d5"
 							android:id="@+id/linea"
 							android:layout_above="@+id/linearLayout1"
 							android:layout_toRightOf="@+id/imagen">
-
 						</View>
 
-						<LinearLayout
+						<RelativeLayout
+							android:orientation="horizontal"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:orientation="vertical"
-							android:padding="10dp"
-							>
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp">
 
 							<LinearLayout
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
-								android:orientation="horizontal"
-								android:gravity="center">
+								android:orientation="vertical"
+								android:layout_alignParentLeft="true">
 
-								<ImageView
+								<LinearLayout
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:id="@+id/imageView1"
-									android:src="@drawable/ic_phone" />
+									android:orientation="horizontal"
+									android:gravity="center"
+									android:layout_marginBottom="5dp"
+									android:layout_marginTop="5dp">
 
+									<ImageView
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:id="@+id/imageView1"
+										android:src="@drawable/ic_home_black_24dp" />
+
+
+									<TextView
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:textAppearance="?android:attr/textAppearanceSmall"
+										android:text="Bº Santa Cecilia 523"
+										android:textColor="@android:color/black"
+										android:padding="5dp"
+										android:id="@+id/textView11" />
+
+								</LinearLayout>
+
+								<LinearLayout
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:gravity="center"
+									android:layout_marginBottom="5dp">
+
+									<ImageView
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:id="@+id/imageView2"
+										android:src="@drawable/ic_phone_black_24dp" />
+
+
+									<TextView
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:textAppearance="?android:attr/textAppearanceSmall"
+										android:text="351-12345678"
+										android:padding="5dp"
+										android:textColor="@android:color/black"
+										android:id="@+id/textView22" />
+
+								</LinearLayout>
+
+								<LinearLayout
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:gravity="center"
+									android:layout_marginBottom="5dp">
+
+									<ImageView
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:id="@+id/imageView3"
+										android:src="@drawable/ic_computer_black_24dp" />
+
+
+
+									<TextView
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:textAppearance="?android:attr/textAppearanceSmall"
+										android:text="wwww.prueba.com"
+										android:textColor="@android:color/black"
+										android:padding="5dp"
+										android:id="@+id/textView33" />
+
+								</LinearLayout>
+
+								<LinearLayout
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:gravity="center"
+									android:layout_marginBottom="5dp">
+
+									<ImageView
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:id="@+id/imageView4"
+										android:src="@drawable/ic_mail_black_24dp" />
+
+
+									<TextView
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:textAppearance="?android:attr/textAppearanceSmall"
+										android:text="email@gmail.com"
+										android:textColor="@android:color/black"
+										android:padding="5dp"
+										android:id="@+id/textView44" />
+
+								</LinearLayout>
+
+							</LinearLayout>
+
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:gravity="center_horizontal"
+								android:layout_marginTop="5dp"
+								android:layout_alignParentRight="true">
+
+								<LinearLayout
+									android:orientation="horizontal"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content">
+
+									<ImageView
+										android:layout_width="25dp"
+										android:layout_height="25dp"
+										android:id="@+id/imageView"
+										android:src="@drawable/visa" />
+
+									<ImageView
+										android:layout_width="25dp"
+										android:layout_height="25dp"
+										android:id="@+id/imageView5"
+										android:src="@drawable/master_card" />
+
+								</LinearLayout>
 
 								<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
 									android:textAppearance="?android:attr/textAppearanceSmall"
-									android:text="Bº Santa Cecilia 523"
-									android:padding="5dp"
-									android:id="@+id/textView11" />
+									android:text="Envío a domicilio"
+									android:textColor="@color/primary"
+									android:id="@+id/textView5"
+									android:gravity="center_horizontal"
+									android:layout_marginTop="10dp"
+									android:textSize="10sp" />
 
 							</LinearLayout>
 
-							<LinearLayout
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:orientation="horizontal"
-								android:gravity="center">
-
-								<ImageView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:id="@+id/imageView2"
-									android:src="@drawable/ic_phone" />
-
-
-								<TextView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:textAppearance="?android:attr/textAppearanceSmall"
-									android:text="351-12345678"
-									android:padding="5dp"
-									android:id="@+id/textView22" />
-
-							</LinearLayout>
-
-							<LinearLayout
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:orientation="horizontal"
-								android:gravity="center">
-
-								<ImageView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:id="@+id/imageView3"
-									android:src="@drawable/ic_phone" />
-
-
-
-								<TextView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:textAppearance="?android:attr/textAppearanceSmall"
-									android:text="wwww.prueba.com"
-									android:padding="5dp"
-									android:id="@+id/textView33" />
-
-							</LinearLayout>
-
-							<LinearLayout
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:orientation="horizontal"
-								android:gravity="center">
-
-								<ImageView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:id="@+id/imageView4"
-									android:src="@drawable/ic_phone" />
-
-
-								<TextView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:textAppearance="?android:attr/textAppearanceSmall"
-									android:text="email@gmail.com"
-									android:padding="5dp"
-									android:id="@+id/textView44" />
-
-							</LinearLayout>
-
-							<LinearLayout
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:orientation="horizontal"
-								android:gravity="center">
-
-								<ImageView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:id="@+id/imageView4"
-									android:src="@drawable/ic_phone" />
-
-
-								<TextView
-									android:layout_width="wrap_content"
-									android:layout_height="wrap_content"
-									android:textAppearance="?android:attr/textAppearanceSmall"
-									android:text="Se reciben tarjetas de crédito"
-									android:padding="5dp"
-									android:id="@+id/textView44" />
-
-							</LinearLayout>
-
-						</LinearLayout>
+						</RelativeLayout>
 
 
 					</LinearLayout>
@@ -308,44 +409,65 @@
 
 				<LinearLayout
 					android:layout_width="match_parent"
-					android:layout_height="match_parent"
+					android:layout_height="wrap_content"
 					android:orientation="vertical"
-					android:layout_marginTop="7dp"
-					android:layout_marginBottom="7dp">
+					android:layout_marginTop="7dp">
 
-					<RelativeLayout
+					<LinearLayout
 						android:layout_width="match_parent"
-						android:layout_height="25dp"
-						android:orientation="horizontal"
-						android:layout_marginTop="20dp"
-						android:layout_marginLeft="10dp"
-						android:layout_marginRight="10dp"
-						android:layout_marginBottom="10dp">
+						android:layout_height="wrap_content"
+						android:orientation="vertical"
+						android:layout_marginLeft="7dp"
+						android:layout_marginRight="7dp">
 
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="match_parent"
-							android:text="Promoción y ofertas"
-							android:layout_alignParentLeft="true"
-							android:gravity="bottom"
-							android:id="@+id/textView3" />
+						<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content">
 
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="Ver más"
-							android:gravity="right"
-							android:background="#3a3a3a"
-							android:textColor="#ffffff"
-							android:padding="5dp"
-							android:layout_alignParentRight="true"
-							android:id="@+id/textView53" />
-					</RelativeLayout>
+							<android.support.v4.view.ViewPager
+								android:id="@+id/pager"
+								android:layout_width="match_parent"
+								android:layout_height="150dp" />
+
+							<ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_navigate_before_white_24dp"
+                                android:id="@+id/imageView6"
+								android:layout_alignParentLeft="true"
+								android:layout_centerVertical="true" />
+
+							<ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_navigate_next_white_24dp"
+                                android:id="@+id/imageView7"
+								android:layout_alignTop="@+id/imageView6"
+								android:layout_centerVertical="true"
+
+								android:layout_alignParentRight="true" />
+
+						</RelativeLayout>
+
+						<com.viewpagerindicator.CirclePageIndicator
+							android:id="@+id/indicator"
+							android:padding="10dip"
+							android:layout_height="20dp"
+							android:layout_width="match_parent"
+							app:radius="4dp"
+							app:fillColor="@color/color_negro_transparente"
+							app:pageColor="@android:color/transparent"
+							app:strokeColor="@color/color_negro_transparente"
+							app:strokeWidth="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true" />
+
+					</LinearLayout>
 
 					<android.support.v7.widget.RecyclerView
 						android:id="@+id/recyclerview1"
 						android:layout_width="match_parent"
-						android:layout_height="match_parent"
+						android:layout_height="wrap_content"
 						android:layout_below="@+id/cardview2"
 						android:clipToPadding="false"
 						android:paddingTop="0dp"/>
@@ -355,7 +477,6 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:orientation="vertical"
-				android:layout_marginTop="5dp"
 				android:layout_marginBottom="5dp">
 
 				<RelativeLayout
@@ -370,7 +491,7 @@
 					<TextView
 						android:layout_width="wrap_content"
 						android:layout_height="match_parent"
-						android:text="Promoción y ofertas"
+						android:text="Destacados!"
 						android:layout_alignParentLeft="true"
 						android:gravity="bottom"
 						android:id="@+id/textView2" />
@@ -529,8 +650,8 @@
 			android:layout_height="@dimen/image_width"
 			android:layout_gravity="center"
 			android:src="@drawable/images"
-			app:border_color="@android:color/white"
-			app:border_width="1dp"
+			app:border_color="#ffd5d5d5"
+			app:border_width="0.5dp"
 			app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
 			android:id="@+id/circle_image_view"
 			android:visibility="visible" />

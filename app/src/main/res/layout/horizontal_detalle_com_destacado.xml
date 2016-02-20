@@ -5,12 +5,13 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:clickable="true"
+    card_view:cardElevation="1dp"
     android:layout_margin="5dp">
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="150dp"
-        android:layout_height="250dp"
+        android:layout_width="160dp"
+        android:layout_height="255dp"
         android:padding="5dp">
 
         <LinearLayout
@@ -19,7 +20,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5">
 
-            <com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/wizard_fragment_image_view"
@@ -34,26 +35,57 @@
             android:layout_height="match_parent"
             android:layout_weight="1.2">
 
-            <TextView
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/fragment_wizard_title"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal"
-                android:layout_weight="1"
-                android:text="Nombre del producto"
-                android:textSize="12dp" />
+                android:layout_weight="1">
 
-            <TextView
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Chaleco antibalas Apto para baile" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.5dp"
+                    android:background="#ffd5d5d5"
+                    android:id="@+id/linea"
+                    android:layout_above="@+id/linearLayout1"
+                    android:layout_toRightOf="@+id/imagen">
+                </View>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/fragment_wizard_subtitle"
-                android:layout_weight="1"
-                android:text="$ 200"
-                android:textSize="20dp"
-                android:gravity="center_vertical" />
+                android:orientation="vertical"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="right"
+                    android:text="Publicado el 14/04/2016"
+                    android:textColor="@color/primary"
+                    android:textSize="9sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/fragment_wizard_subtitle"
+                    android:text="$ 200"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 

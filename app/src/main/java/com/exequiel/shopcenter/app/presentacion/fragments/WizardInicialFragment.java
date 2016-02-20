@@ -48,10 +48,7 @@ public class WizardInicialFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.horizontal_detalle_com_destacado, container, false);
-        lblTitulo = (TextView) view.findViewById(R.id.fragment_wizard_title);
-        lblSubTitulo = (TextView) view.findViewById(R.id.fragment_wizard_subtitle);
-        imgView = (ImageView) view.findViewById(R.id.wizard_fragment_image_view);
+        View view = inflater.inflate(R.layout.fragment_detalle_com_banner, container, false);
         return view;
     }
 

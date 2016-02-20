@@ -9,7 +9,7 @@ import com.exequiel.shopcenter.app.presentacion.fragments.WizardInicialFragment;
 //Para representar los fragmentos como paginas que se mostraran en el ViewPager
 public class WizardInicialAdapter extends FragmentPagerAdapter {
 
-    private final int count = 10;
+    private final int count = 3;
 
     public WizardInicialAdapter(FragmentManager fm) {
         super(fm);
@@ -36,8 +36,4 @@ public class WizardInicialAdapter extends FragmentPagerAdapter {
         return count;
     }
 
-    @Override
-    public float getPageWidth(int position) {
-        return 0.33f;
-    }
 }
