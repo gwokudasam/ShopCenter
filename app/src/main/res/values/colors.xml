@@ -7,4 +7,9 @@
     <color name="verde">#FF24C065</color>
     <color name="color_negro_transparente">#DC000000</color>
 
+    <color name="color_menu_negro_separador">#FF0E1518</color>
+    <color name="color_menu_negro_bg">#212425</color>
+    <color name="color_menu_txt_color">#FF687780</color>
+    <color name="color_menu_negro_claro_img">#96424242</color>
+
 </resources>

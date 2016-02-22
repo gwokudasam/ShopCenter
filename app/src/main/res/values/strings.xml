@@ -18,4 +18,14 @@
     <string name="quila_name">Quila</string>
     <string name="quila_tagline">I love bones and slippers</string>
     <string name="quila_name2">Quila!</string>
+
+    <!-- Drawer -->
+    <string name="drawer_welcome">Welcome,</string>
+    <string-array name="drawer_nav_options">
+        <item>HOME</item>
+        <item>PERFIL</item>
+        <item>VOUCHERS</item>
+        <item>AGENDA</item>
+        <item>DESEOS</item>
+    </string-array>
 </resources>

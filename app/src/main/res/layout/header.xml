@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_menu_negro_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="15dp">
+
+            <RelativeLayout
+                android:layout_width="125dp"
+                android:layout_height="125dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:src="@android:color/transparent"
+                    app:border_color="@color/color_menu_negro_claro_img"
+                    app:border_width="10dp"
+                    app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
+                    android:id="@+id/circle_image_view"
+                    android:visibility="visible" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/com_facebook_profile_picture_blank_square"
+                    app:border_color="@android:color/transparent"
+                    app:border_width="1dp"
+                    app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
+                    android:visibility="visible"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exequiel Zeballos"
+                android:id="@+id/drawer_img_user_name"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido"
+                android:id="@+id/drawer_img_user_welcome"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

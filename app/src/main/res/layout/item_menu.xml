@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:id="@+id/menu_item"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="@color/color_menu_negro_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/drawer_nav_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_done_white_24px"
+            android:layout_marginRight="-40dp"
+            android:layout_toLeftOf="@+id/drawer_nav_title"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/drawer_nav_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_menu_txt_color"
+            android:text="HOME"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentBottom="true"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1"
+            android:id="@+id/textView37"
+            android:background="@drawable/ic_statusbar_badge"
+            android:textSize="15sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>
+

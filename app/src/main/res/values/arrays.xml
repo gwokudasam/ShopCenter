@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="registration_titles">
+        <item>Mrs</item>
+        <item>Ms</item>
+        <item>Miss</item>
+    </array>
+
+    <array name="registration_countries">
+        <item>Belgium</item>
+        <item>Germany</item>
+        <item>Spain</item>
+        <item>France</item>
+        <item>Ireland</item>
+        <item>Italy</item>
+        <item>The Netherlands</item>
+        <item>United Kingdom</item>
+        <item>Other</item>
+    </array>
+
+    <array name="registration_countries_code">
+        <item>BE</item>
+        <item>DE</item>
+        <item>ES</item>
+        <item>FR</item>
+        <item>IE</item>
+        <item>IT</item>
+        <item>NL</item>
+        <item>UK</item>
+        <item>EU</item>
+    </array>
+
+</resources>

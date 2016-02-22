@@ -18,10 +18,7 @@
         <activity
             android:name=".app.presentacion.activitys.SplashAwesome"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity
@@ -37,6 +34,15 @@
         <activity
             android:name=".app.presentacion.activitys.IntroActivity"
             android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".app.presentacion.activitys.GralMenuActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data
