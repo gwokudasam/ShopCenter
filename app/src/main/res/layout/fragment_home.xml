@@ -33,7 +33,7 @@
                         <android.support.v4.view.ViewPager
                             android:id="@+id/pager"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp" />
+                            android:layout_height="200dp" />
 
                         <ImageView
                             android:layout_width="40dp"
@@ -50,141 +50,289 @@
                             android:id="@+id/imageView7"
                             android:layout_alignTop="@+id/imageView6"
                             android:layout_centerVertical="true"
-
                             android:layout_alignParentRight="true" />
 
-                    </RelativeLayout>
+                        <com.viewpagerindicator.CirclePageIndicator
+                            android:id="@+id/indicator"
+                            android:padding="10dip"
+                            android:layout_height="20dp"
+                            android:layout_width="match_parent"
+                            app:radius="4dp"
+                            app:fillColor="@color/primary"
+                            app:pageColor="@android:color/transparent"
+                            app:strokeColor="@color/primary"
+                            app:strokeWidth="1dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"/>
 
-                    <com.viewpagerindicator.CirclePageIndicator
-                        android:id="@+id/indicator"
-                        android:padding="10dip"
-                        android:layout_height="20dp"
-                        android:layout_width="match_parent"
-                        app:radius="4dp"
-                        app:fillColor="@color/color_negro_transparente"
-                        app:pageColor="@android:color/transparent"
-                        app:strokeColor="@color/color_negro_transparente"
-                        app:strokeWidth="1dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
-                        android:visibility="gone" />
+                    </RelativeLayout>
 
                 </LinearLayout>
 
 
             </RelativeLayout>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="4dp"
-                app:cardElevation="2dp"
-                app:cardPreventCornerOverlap="false"
-                app:cardUseCompatPadding="true">
-
-            </android.support.v7.widget.CardView>
-
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="3dp">
+                android:layout_height="match_parent">
 
-                <RelativeLayout
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:id="@+id/textView10"
+                    android:paddingTop="7dp"
+                    android:background="@color/primary"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="7dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Últimos comercios adheridos"
+                    android:id="@+id/textView12"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:autoText="false"
+                    android:background="#f0f0f0" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerviewlastcomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/cardview2"
+                    android:clipToPadding="false"
+                    android:background="#f0f0f0"
+                    android:paddingTop="0dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_marginRight="1.5dp">
-
-                    <com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/home_inspiration"
-                        android:background="@null"
-                        android:id="@+id/fragment_home_fondo_inspiration"
-                        android:clickable="true" />
-
-                </RelativeLayout>
-
-                <com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:adjustViewBounds="true"
-                    android:id="@+id/fragment_home_imgtn_red_shop"
-                    android:src="@drawable/home_specials"
-                    android:layout_weight="1"
-                    android:layout_marginLeft="1.5dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="3dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginRight="1.5dp">
-
-                    <com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/home_jeans_advisor"
-                        android:background="@null"
-                        android:id="@+id/fragment_home_fondo_jeans_advisor"
-                        android:clickable="true"/>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_marginLeft="1.5dp">
-
-                    <com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/home_store_locator"
-                        android:background="@null"
-                        android:id="@+id/fragment_home_fondo_store_locator"
-                        android:clickable="true"/>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="true">
-
-                <com.exequiel.shopcenter.framework.ui.view.ProportionalImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/home_shop"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/linearLayout2"
                     android:clickable="true"
-                    android:id="@+id/fragment_home_fondo_shop"/>
+                    android:background="@drawable/layer_item_my_account" >
 
-            </RelativeLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp" >
+
+                        <ImageView
+                            android:id="@+id/drawer_nav_icon"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_done_white_24px"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="MI CUENTA"
+                            android:id="@+id/textView13"
+                            android:layout_marginRight="10dp" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageButton"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_my_account_arrow"
+                        android:background="@android:color/transparent"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/layer_item_my_account"
+                    android:id="@+id/linearLayout3"
+                    android:layout_marginTop="10dp" >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp" >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_done_white_24px"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="VER COMERCIOS"
+                            android:id="@+id/textView15"
+                            android:layout_marginRight="10dp" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageButton3"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_my_account_arrow"
+                        android:background="@android:color/transparent"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/layer_item_my_account"
+                    android:id="@+id/linearLayout4"
+                    android:layout_marginTop="10dp" >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp" >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_done_white_24px"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="CUPONES Y OFERTAS"
+                            android:id="@+id/textView16"
+                            android:layout_marginRight="10dp" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageButton2"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_my_account_arrow"
+                        android:background="@android:color/transparent"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/layer_item_my_account"
+                    android:id="@+id/linearLayout5"
+                    android:layout_marginTop="10dp" >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp" >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_done_white_24px"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="TIENDAS CERCANAS"
+                            android:layout_marginRight="10dp" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageButton4"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_my_account_arrow"
+                        android:background="@android:color/transparent"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/layer_item_my_account"
+                    android:id="@+id/linearLayout5"
+                    android:layout_marginTop="10dp" >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp" >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_done_white_24px"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="BUSCAR PRODUCTOS"
+                            android:layout_marginRight="10dp" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageButton4"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_my_account_arrow"
+                        android:background="@android:color/transparent"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

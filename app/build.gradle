@@ -51,6 +51,11 @@ dependencies {
     compile 'com.android.support:palette-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
 
+    // Geotrigger SDK for Android
+    compile 'com.esri.android.geotrigger:geotrigger-sdk:1.2.0'
+    // The Geotrigger SDK requires Google Play Services 6.5.87 (or higher)
+    compile 'com.google.android.gms:play-services:6.5.87'
+
     //Menu cicular
     compile 'com.sa90.materialarcmenu:library:1.4'
 

@@ -5,12 +5,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.exequiel.shopcenter.R;
+import com.exequiel.shopcenter.app.presentacion.adapters.CustomLinearLayoutManager;
+import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComentarioComercioAdapter;
+import com.exequiel.shopcenter.app.presentacion.adapters.ItemComercioNuevo;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.exequiel.shopcenter.framework.ui.fragment.FrameworkBaseFragment;
 import com.squareup.picasso.Picasso;
@@ -54,6 +59,16 @@ public class HomeFragment extends FrameworkBaseFragment {
         viewPager.setAdapter(wizardInicialAdapter);
         titlePageIndicator.setViewPager(viewPager);
         //ViewPager
+
+        ItemComercioNuevo recyclerViewAdapter3 = new ItemComercioNuevo();
+        RecyclerView recyclerView3 = (RecyclerView) view.findViewById(R.id.recyclerviewlastcomer);
+        final CustomLinearLayoutManager layoutManager3 = new CustomLinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        // layoutManager = new LinearLayoutManager(this);
+        //final MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getScreenHeight(this));
+        recyclerView3.setLayoutManager(layoutManager3);
+        recyclerView3.setAdapter(recyclerViewAdapter3);
+        recyclerView3.setNestedScrollingEnabled(false);
         return view;
     }
 
