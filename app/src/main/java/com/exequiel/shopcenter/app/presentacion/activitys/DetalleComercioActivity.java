@@ -1,5 +1,9 @@
 package com.exequiel.shopcenter.app.presentacion.activitys;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.view.ViewPager;
@@ -27,6 +31,9 @@ import com.github.clans.fab.FloatingActionMenu;
 import com.sa90.materialarcmenu.ArcMenu;
 import com.viewpagerindicator.CirclePageIndicator;
 
+import java.util.List;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DetalleComercioActivity extends AppCompatActivity

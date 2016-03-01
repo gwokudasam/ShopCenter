@@ -28,4 +28,7 @@
         <item>AGENDA</item>
         <item>DESEOS</item>
     </string-array>
+
+    <!-- Facebook -->
+    <string name="facebook_app_id">240982362905058</string>
 </resources>

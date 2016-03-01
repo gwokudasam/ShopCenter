@@ -12,6 +12,7 @@ apply plugin: 'io.fabric'
 
 repositories {
     maven { url 'https://maven.fabric.io/public' }
+
 }
 
 
@@ -51,6 +52,12 @@ dependencies {
     compile 'com.android.support:palette-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
 
+    // Sweet Dialog
+    compile 'cn.pedant.sweetalert:library:1.3'
+
+    //pull down to refresh
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+
     // Geotrigger SDK for Android
     compile 'com.esri.android.geotrigger:geotrigger-sdk:1.2.0'
     // The Geotrigger SDK requires Google Play Services 6.5.87 (or higher)
@@ -61,6 +68,9 @@ dependencies {
 
     //Intro
     compile 'com.github.paolorotolo:appintro:3.4.0'
+
+    //Facebook
+    compile 'com.facebook.android:facebook-android-sdk:4.0.0'
 
     //Splash
     compile 'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'

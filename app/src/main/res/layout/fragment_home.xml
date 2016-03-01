@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -54,15 +55,14 @@
 
                         <com.viewpagerindicator.CirclePageIndicator
                             android:id="@+id/indicator"
-                            android:padding="10dip"
-                            android:layout_height="20dp"
+                            android:padding="5dip"
+                            android:layout_height="25dp"
                             android:layout_width="match_parent"
                             app:radius="4dp"
                             app:fillColor="@color/primary"
                             app:pageColor="@android:color/transparent"
                             app:strokeColor="@color/primary"
                             app:strokeWidth="1dp"
-                            android:layout_marginBottom="15dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"/>
 

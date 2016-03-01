@@ -18,7 +18,10 @@
         <activity
             android:name=".app.presentacion.activitys.SplashAwesome"
             android:screenOrientation="portrait">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -27,7 +30,7 @@
         </activity>
 
         <activity
-            android:name=".app.presentacion.activitys.DetalleComercioActivity"
+            android:name=".app.presentacion.activitys.GralMenuActivity"
             android:screenOrientation="portrait">
         </activity>
 
@@ -37,17 +40,18 @@
         </activity>
 
         <activity
-            android:name=".app.presentacion.activitys.GralMenuActivity"
+            android:name=".app.presentacion.activitys.DetalleComercioActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="b0c2adb10a40dc429ae20d46c2a896bf5743c42d" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
     </application>
 
 </manifest>
