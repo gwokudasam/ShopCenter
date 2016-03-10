@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/first"
+        android:checkableBehavior="single">
+
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:title=""
+            app:actionLayout="@layout/item_menu"
+            app:showAsAction="always" />
+
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:title=""
+            app:actionLayout="@layout/item_menu"
+            app:showAsAction="always" />
+
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:title=""
+            app:actionLayout="@layout/item_menu"
+            app:showAsAction="always" />
+
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:title=""
+            app:actionLayout="@layout/item_menu"
+            app:showAsAction="always" />
+
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:title=""
+            app:actionLayout="@layout/item_menu"
+            app:showAsAction="always" />
+
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:title=""
+            app:actionLayout="@layout/item_menu"
+            app:showAsAction="always" />
+
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:title=""
+            app:actionLayout="@layout/item_menu"
+            app:showAsAction="always" />
+
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:title=""
+            app:actionLayout="@layout/item_menu"
+            app:showAsAction="always" />
+    </group>
+
+    <group
+        android:id="@+id/second"
+        android:checkableBehavior="single">
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navi_item_create_notifications_sound"
+            android:title="Notifications Sounds"
+            app:actionLayout="@layout/menu_switch"
+            app:showAsAction="always" />
+
+    </group>
+</menu>

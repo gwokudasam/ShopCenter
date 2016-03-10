@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -37,6 +38,9 @@ public class GralMenuActivity extends BaseActivity {
     @InjectView(R.id.drawer_options)
     protected ListView NavList;
 
+    private Toolbar mToolbar;
+
+
     private ArrayList<ItemObject> NavItms;
     private NavigationAdapter NavAdapter;
 
@@ -46,13 +50,13 @@ public class GralMenuActivity extends BaseActivity {
         HandleFragmentsActivityGral.changeFragment(HomeFragment.class, getSupportFragmentManager());
         initMenuHeader();
         initNavigationOptions();
+        mToolbar        = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setTitle("");
     }
 
     private void initMenuHeader() {
         View header = getLayoutInflater().inflate(R.layout.header, null);
-
         CircleImageView imgAvatar = (CircleImageView)header.findViewById(R.id.circle_image_view);
-
         TextView name = (TextView) header.findViewById(R.id.drawer_img_user_name);
         name.setText("RENATE SCHWARZLER");
 
@@ -77,6 +81,10 @@ public class GralMenuActivity extends BaseActivity {
         NavItms.add(new ItemObject(titulos[2], R.drawable.ic_done_white_24px));
         NavItms.add(new ItemObject(titulos[3], R.drawable.ic_done_white_24px));
         NavItms.add(new ItemObject(titulos[4], R.drawable.ic_done_white_24px));
+        NavItms.add(new ItemObject(titulos[5], R.drawable.ic_done_white_24px));
+        NavItms.add(new ItemObject(titulos[6], R.drawable.ic_done_white_24px));
+        NavItms.add(new ItemObject(titulos[7], R.drawable.ic_done_white_24px));
+
 
         //Declaramos y seteamos nuestro adaptador al cual le pasamos el array con los titulos
         NavAdapter = new NavigationAdapter(this, NavItms);

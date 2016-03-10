@@ -23,10 +23,13 @@
     <string name="drawer_welcome">Welcome,</string>
     <string-array name="drawer_nav_options">
         <item>HOME</item>
-        <item>PERFIL</item>
-        <item>VOUCHERS</item>
+        <item>MI CUENTA</item>
+        <item>VOUCHERS Y CUPONES</item>
         <item>AGENDA</item>
         <item>DESEOS</item>
+        <item>NOTIFICACIONES</item>
+        <item>REPORTAR MEJORAS</item>
+        <item>CONTACTO</item>
     </string-array>
 
     <!-- Facebook -->

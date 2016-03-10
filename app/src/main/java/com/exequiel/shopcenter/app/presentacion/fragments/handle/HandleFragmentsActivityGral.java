@@ -46,7 +46,6 @@ public class HandleFragmentsActivityGral {
 
         FrameworkBaseFragment fragment = createInstanceFragment(classFragment, bundle);
         String tag = fragment.getTagFragment();
-
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.drawer_container, fragment, tag);
         ft.addToBackStack(null);
