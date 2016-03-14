@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+
 import com.exequiel.shopcenter.R;
 import com.exequiel.shopcenter.app.presentacion.adapters.CustomLinearLayoutManager;
 import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComentarioComercioAdapter;
@@ -43,10 +44,6 @@ public class HomeFragment extends FrameworkBaseFragment {
     ViewPager viewPager;
     WizardInicialAdapter wizardInicialAdapter;
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Nullable
     @Override

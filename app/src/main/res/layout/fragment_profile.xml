@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_width"
+            android:layout_gravity="center"
+            android:src="@drawable/images"
+            app:border_color="#ffd5d5d5"
+            app:border_width="0.5dp"
+            app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
+            android:id="@+id/circle_image_view"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_my_account_logued_img_add"
+            android:src="@drawable/ic_my_account_avatar_add"
+            android:layout_marginEnd="10dp"
+            android:layout_alignBottom="@+id/circle_image_view"
+            android:layout_alignRight="@+id/circle_image_view" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circle_image_view"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Julio Exequiel Zeballos" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Córdoba, Argentina"
+                android:id="@+id/textView17" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:background="@drawable/layer_line_buttom_my_account"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/fragment_my_account_logued_layout_jc"
+                    android:clickable="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="POINTS"
+                        android:id="@+id/fragment_my_account_logued_txt_jc_point_title"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="100"
+                        android:id="@+id/fragment_my_account_logued_txt_jc_point_data"
+                        android:textColor="@android:color/white"
+                        android:textSize="25dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="VOUCHERS"
+                        android:id="@+id/fragment_my_account_logued_txt_cant_vouchers_title"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="€5"
+                        android:id="@+id/fragment_my_account_logued_txt_vaucher_values_data"
+                        android:textColor="@android:color/white"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:layout_gravity="bottom"
+        android:layout_margin="30dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="NOMBRE"
+                        android:id="@+id/textView11"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/activity_register_edit_first_name"
+                        android:maxLength="25"
+                        android:inputType="textPersonName"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="bottom" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fragment_edit_perfil_imgbtn_man"
+                        android:layout_marginRight="6dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fragment_edit_perfil_imgbtn_woman"
+                        android:layout_marginLeft="6dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="APELLIDO"
+                    android:id="@+id/textView12" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_register_edit_middle_name"
+                    android:layout_weight="0"
+                    android:maxLength="10"
+                    android:gravity="bottom"
+                    android:inputType="textPersonName"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="CUMPLEAÑOS"
+                    android:id="@+id/textView13" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_register_edit_last_name"
+                    android:layout_weight="0"
+                    android:maxLength="20"
+                    android:gravity="bottom"
+                    android:inputType="textPersonName"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="E-MAIL"
+                    android:id="@+id/textView14" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_register_edit_email"
+                    android:layout_weight="1"
+                    android:maxLength="35"
+                    android:gravity="bottom"
+                    android:inputType="textEmailAddress"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
@@ -21,6 +22,7 @@ import com.exequiel.shopcenter.app.presentacion.adapters.ItemObject;
 import com.exequiel.shopcenter.app.presentacion.adapters.NavigationAdapter;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.exequiel.shopcenter.app.presentacion.fragments.HomeFragment;
+import com.exequiel.shopcenter.app.presentacion.fragments.ProfileFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.handle.HandleFragmentsActivityGral;
 import com.exequiel.shopcenter.componentes.util.UtilImagen;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -47,11 +49,15 @@ public class GralMenuActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState, R.layout.activity_menu);
-        HandleFragmentsActivityGral.changeFragment(HomeFragment.class, getSupportFragmentManager());
+        HandleFragmentsActivityGral.changeFragment(ProfileFragment.class, getSupportFragmentManager());
         initMenuHeader();
         initNavigationOptions();
         mToolbar        = (Toolbar) findViewById(R.id.toolbar);
-        mToolbar.setTitle("");
+        mToolbar.setTitle("titulo");
+        setSupportActionBar(mToolbar);
+
+        final ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
     }
 
     private void initMenuHeader() {
