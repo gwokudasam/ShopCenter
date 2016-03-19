@@ -29,10 +29,10 @@ public class IntroActivity extends AppIntro2 {
 
         // Instead of fragments, you can also use our default slide
         // Just set a title, description, background and image. AppIntro will do the rest.
-        addSlide(AppIntroFragment.newInstance("Title", "description", R.drawable.app_logo_big, Color.parseColor("#FF47B612")));
-        addSlide(AppIntroFragment.newInstance("Title", "description", R.drawable.app_logo_big, Color.parseColor("#FF47B612")));
-        addSlide(AppIntroFragment.newInstance("Title", "description", R.drawable.app_logo_big, Color.parseColor("#FF47B612")));
-        addSlide(AppIntroFragment.newInstance("Title", "description", R.drawable.app_logo_big, Color.parseColor("#FF47B612")));
+        addSlide(AppIntroFragment.newInstance(getString(R.string.intro_1_title), getString(R.string.intro_1_descripcion), R.drawable.app_logo_big, Color.parseColor("#FF47B612")));
+        addSlide(AppIntroFragment.newInstance(getString(R.string.intro_2_title), getString(R.string.intro_2_descripcion), R.drawable.app_logo_big, Color.parseColor("#FF47B612")));
+        addSlide(AppIntroFragment.newInstance(getString(R.string.intro_3_title), getString(R.string.intro_3_descripcion), R.drawable.app_logo_big, Color.parseColor("#FF47B612")));
+        addSlide(AppIntroFragment.newInstance(getString(R.string.intro_4_title), getString(R.string.intro_4_descripcion), R.drawable.app_logo_big, Color.parseColor("#FF47B612")));
         setFlowAnimation();
         /*
         // OPTIONAL METHODS
@@ -58,7 +58,7 @@ public class IntroActivity extends AppIntro2 {
 
     @Override
     public void onDonePressed() {
-        Intent intent = new Intent(this,DetalleComercioActivity.class);
+        Intent intent = new Intent(this,GralMenuActivity.class);
         startActivity(intent);
     }
 

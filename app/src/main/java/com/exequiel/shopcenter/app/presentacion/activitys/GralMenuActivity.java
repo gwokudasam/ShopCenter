@@ -49,7 +49,7 @@ public class GralMenuActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState, R.layout.activity_menu);
-        HandleFragmentsActivityGral.changeFragment(ProfileFragment.class, getSupportFragmentManager());
+        HandleFragmentsActivityGral.changeFragment(HomeFragment.class, getSupportFragmentManager());
         initMenuHeader();
         initNavigationOptions();
         mToolbar        = (Toolbar) findViewById(R.id.toolbar);

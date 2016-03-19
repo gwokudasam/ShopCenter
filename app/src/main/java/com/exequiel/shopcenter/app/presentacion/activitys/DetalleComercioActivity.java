@@ -67,25 +67,10 @@ public class DetalleComercioActivity extends AppCompatActivity
 
         menu = (FloatingActionMenu) findViewById(R.id.menu1);
 
-
-        //RecyclerViewAdapter
-
-        /*AvisosComercioAdapter recyclerViewAdapter = new AvisosComercioAdapter();
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview1);
-        final CustomLinearLayoutManager layoutManager = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        // layoutManager = new LinearLayoutManager(this);
-        //final MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getScreenHeight(this));
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(recyclerViewAdapter);
-        recyclerView.setNestedScrollingEnabled(false);*/
-
         DetalleComercioAdapter recyclerViewAdapter1 = new DetalleComercioAdapter();
         RecyclerView recyclerView1 = (RecyclerView) findViewById(R.id.recyclerview2);
         final CustomLinearLayoutManager layoutManager1 = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        // layoutManager = new LinearLayoutManager(this);
-        //final MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getScreenHeight(this));
+
         recyclerView1.setLayoutManager(layoutManager1);
         recyclerView1.setAdapter(recyclerViewAdapter1);
         recyclerView1.setNestedScrollingEnabled(false);
@@ -93,9 +78,7 @@ public class DetalleComercioActivity extends AppCompatActivity
         DetalleComercioAdapter recyclerViewAdapter2 = new DetalleComercioAdapter();
         RecyclerView recyclerView2 = (RecyclerView) findViewById(R.id.recyclerview3);
         final CustomLinearLayoutManager layoutManager2 = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        // layoutManager = new LinearLayoutManager(this);
-        //final MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getScreenHeight(this));
+
         recyclerView2.setLayoutManager(layoutManager2);
         recyclerView2.setAdapter(recyclerViewAdapter2);
         recyclerView2.setNestedScrollingEnabled(false);
@@ -103,9 +86,6 @@ public class DetalleComercioActivity extends AppCompatActivity
         DetalleComentarioComercioAdapter recyclerViewAdapter3 = new DetalleComentarioComercioAdapter();
         RecyclerView recyclerView3 = (RecyclerView) findViewById(R.id.recyclerview4);
         final CustomLinearLayoutManager layoutManager3 = new CustomLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        // layoutManager = new LinearLayoutManager(this);
-        //final MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getScreenHeight(this));
         recyclerView3.setLayoutManager(layoutManager3);
         recyclerView3.setAdapter(recyclerViewAdapter3);
         recyclerView3.setNestedScrollingEnabled(false);

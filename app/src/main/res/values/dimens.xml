@@ -4,15 +4,23 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <dimen name="spacing_xsmall">2dp</dimen>
-<dimen name="spacing_medium">8dp</dimen>
-<dimen name="spacing_large">16dp</dimen>
-<dimen name="spacing_xlarge">32dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_large">16dp</dimen>
+    <dimen name="spacing_xlarge">32dp</dimen>
 
-<dimen name="elevation_low">9dp</dimen>
-<dimen name="elevation_high">12dp</dimen>
-<dimen name="status_bar_height">25dp</dimen>
+    <dimen name="elevation_low">9dp</dimen>
+    <dimen name="elevation_high">12dp</dimen>
+    <dimen name="status_bar_height">25dp</dimen>
 
 
+    <!-- Margenes y bordes para el boton -->
+    <dimen name="input_border_radius">18dp</dimen>
+    <dimen name="input_border_radius_null">0dp</dimen>
+    <dimen name="input_border_radius_padding">5dp</dimen>
+    <dimen name="input_border_radius_padding_lateral">10dp</dimen>
+    <dimen name="input_border_radius_margin_bottom">5dp</dimen>
+
+    <dimen name="button_border_radius_padding">0dp</dimen>
 
     <!-- dimensions -->
     <dimen name="image_width">120dp</dimen>

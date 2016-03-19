@@ -32,6 +32,16 @@
         <item>CONTACTO</item>
     </string-array>
 
+    <!-- Intro -->
+    <string name="intro_1_title">Beneficios exclusivos</string>
+    <string name="intro_1_descripcion">Festeja tu cumple comprando más barato, scanea el código qr de tu comercio y gana un descuento para tu próxima compra o simplemente busca las ofertas y descuentos disponibles a cada momento</string>
+    <string name="intro_2_title">No pierdas el contacto</string>
+    <string name="intro_2_descripcion">Te regalamos una agenda personal para que no pierdas de vista tus comercios favoritos y estés informado de las novedades que tienen preparadas para vos. Si no sabes como llegar nosotros te mostramos como</string>
+    <string name="intro_3_title">Encuentra lo que estás buscando</string>
+    <string name="intro_3_descripcion">Previsualiza los diferentes productos y sus características, elije uno y cómpralo. Usa nuestro filtro en el buscador y agiliza tu compra desde tu casa</string>
+    <string name="intro_4_title">Lista tus deseos</string>
+    <string name="intro_4_descripcion">Arma tu lista de deseos y compártela a tus amigos o simplemente guárdala y ve a comprarlo tu mismo con la ayuda de nuestro mapa que te va a mostrar el mejor recorrido</string>
+
     <!-- Facebook -->
     <string name="facebook_app_id">240982362905058</string>
 </resources>
