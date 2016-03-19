@@ -71,7 +71,7 @@
                     android:layout_weight="2"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/imagen"
-                    android:layout_marginLeft="21dp">
+                    android:layout_marginLeft="5dp">
 
 
                     <TextView
