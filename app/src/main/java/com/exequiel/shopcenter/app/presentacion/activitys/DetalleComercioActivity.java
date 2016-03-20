@@ -70,7 +70,6 @@ public class DetalleComercioActivity extends AppCompatActivity
         DetalleComercioAdapter recyclerViewAdapter1 = new DetalleComercioAdapter();
         RecyclerView recyclerView1 = (RecyclerView) findViewById(R.id.recyclerview2);
         final CustomLinearLayoutManager layoutManager1 = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-
         recyclerView1.setLayoutManager(layoutManager1);
         recyclerView1.setAdapter(recyclerViewAdapter1);
         recyclerView1.setNestedScrollingEnabled(false);
@@ -78,10 +77,16 @@ public class DetalleComercioActivity extends AppCompatActivity
         DetalleComercioAdapter recyclerViewAdapter2 = new DetalleComercioAdapter();
         RecyclerView recyclerView2 = (RecyclerView) findViewById(R.id.recyclerview3);
         final CustomLinearLayoutManager layoutManager2 = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-
         recyclerView2.setLayoutManager(layoutManager2);
         recyclerView2.setAdapter(recyclerViewAdapter2);
         recyclerView2.setNestedScrollingEnabled(false);
+
+        AvisosComercioAdapter recyclerViewAdapter4 = new AvisosComercioAdapter();
+        RecyclerView recyclerView4 = (RecyclerView) findViewById(R.id.recyclerview5);
+        final CustomLinearLayoutManager layoutManager4 = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView4.setLayoutManager(layoutManager4);
+        recyclerView4.setAdapter(recyclerViewAdapter4);
+        recyclerView4.setNestedScrollingEnabled(false);
 
         DetalleComentarioComercioAdapter recyclerViewAdapter3 = new DetalleComentarioComercioAdapter();
         RecyclerView recyclerView3 = (RecyclerView) findViewById(R.id.recyclerview4);

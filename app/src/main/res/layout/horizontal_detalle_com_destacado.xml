@@ -14,8 +14,7 @@
         android:layout_height="255dp"
         android:padding="5dp">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.5">
@@ -27,7 +26,25 @@
                 android:src="@drawable/intro_screen1"
                 android:scaleType="centerCrop"/>
 
-        </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="#a9000000"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="En oferta!!!"
+                    android:id="@+id/textView27"
+                    android:textColor="@color/primary"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:orientation="vertical"
