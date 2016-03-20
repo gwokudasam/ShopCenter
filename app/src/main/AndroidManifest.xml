@@ -40,6 +40,11 @@
         </activity>
 
         <activity
+            android:name=".app.presentacion.activitys.LoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
             android:name=".app.presentacion.activitys.DetalleComercioActivity"
             android:screenOrientation="portrait">
         </activity>

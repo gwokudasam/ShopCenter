@@ -13,5 +13,7 @@
     <color name="color_menu_negro_claro_img">#96424242</color>
     <color name="color_azul_oscuro_gral">#455057</color>
     <color name="button_background_login">#353B4A</color>
+    <color name="color_gris_background">#FFECECEC</color>
+
 
 </resources>

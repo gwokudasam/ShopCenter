@@ -14,9 +14,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/linearLayout7"
-            android:layout_alignLeft="@+id/linearLayout7"
-            android:layout_marginBottom="68dp">
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
 
             <ImageView
                 android:layout_width="90dp"
@@ -35,8 +34,9 @@
                 android:text="Shop Center"
                 android:id="@+id/textView20"
                 android:layout_gravity="center_horizontal"
-                android:textSize="25sp"
-                android:textColor="@color/primary" />
+                android:textSize="20sp"
+                android:textColor="@color/primary"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -56,13 +56,13 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColorHint="#FF858583"
                 android:gravity="bottom|left"
-                android:inputType="textEmailAddress|number"
+                android:inputType="textEmailAddress"
                 android:maxLength="13"
                 android:layout_gravity="bottom"
                 android:text=""
                 android:layout_marginBottom="25dp"
                 android:hint="Correo E-mail"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 android:paddingBottom="10dp" />
 
             <EditText
@@ -73,17 +73,17 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColorHint="#FF858583"
                 android:gravity="left"
-                android:inputType="numberPassword"
                 android:maxLength="4"
                 android:layout_marginBottom="25dp"
                 android:text=""
                 android:hint="Contraseña"
-                android:textSize="15sp"
-                android:paddingBottom="10dp" />
+                android:textSize="12sp"
+                android:paddingBottom="10dp"
+                android:inputType="textPassword" />
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:text="Login"
                 android:background="@color/primary"
                 android:id="@+id/activity_login_btn_login"
@@ -117,7 +117,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:background="#44619d"
                 android:id="@+id/activity_login_btn_register"
                 android:layout_weight="0"
@@ -127,12 +127,12 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#1db2e9"
-                android:id="@+id/button3"
+                android:layout_height="40dp"
+                android:background="@color/color_azul_oscuro_gral"
+                android:id="@+id/btn_pruebe_app"
                 android:layout_weight="0"
                 android:textColor="@android:color/white"
-                android:text="Login con twitter" />
+                android:text="Pruebe la app" />
         </LinearLayout>
 
         <RelativeLayout

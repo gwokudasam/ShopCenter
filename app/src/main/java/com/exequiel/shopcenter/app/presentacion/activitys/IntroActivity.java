@@ -58,7 +58,7 @@ public class IntroActivity extends AppIntro2 {
 
     @Override
     public void onDonePressed() {
-        Intent intent = new Intent(this,GralMenuActivity.class);
+        Intent intent = new Intent(this,LoginActivity.class);
         startActivity(intent);
     }
 
