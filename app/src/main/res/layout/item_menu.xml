@@ -43,12 +43,12 @@
             android:layout_toRightOf="@+id/drawer_nav_icon" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="1"
             android:id="@+id/textView37"
-            android:background="@drawable/ic_statusbar_badge"
+            android:background="@drawable/green_badge"
             android:textSize="15sp"
             android:textColor="@android:color/white"
             android:gravity="center"

@@ -21,8 +21,10 @@ import com.exequiel.shopcenter.app.data.UtilPreferences;
 import com.exequiel.shopcenter.app.presentacion.adapters.ItemObject;
 import com.exequiel.shopcenter.app.presentacion.adapters.NavigationAdapter;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
+import com.exequiel.shopcenter.app.presentacion.fragments.AgendaFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.DetalleProductoFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.HomeFragment;
+import com.exequiel.shopcenter.app.presentacion.fragments.ListProductsFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.ProfileFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.handle.HandleFragmentsActivityGral;
 import com.exequiel.shopcenter.componentes.util.UtilImagen;
@@ -50,7 +52,7 @@ public class GralMenuActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState, R.layout.activity_menu);
-        HandleFragmentsActivityGral.changeFragment(DetalleProductoFragment.class, getSupportFragmentManager());
+        HandleFragmentsActivityGral.changeFragment(AgendaFragment.class, getSupportFragmentManager());
         initMenuHeader();
         initNavigationOptions();
         mToolbar        = (Toolbar) findViewById(R.id.toolbar);

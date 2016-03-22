@@ -23,20 +23,20 @@ public class SplashAwesome extends AwesomeSplash {
             /* you don't have to override every property */
 
         //Customize Circular Reveal
-        configSplash.setBackgroundColor(R.color.primary); //any color you want form colors.xml
-        configSplash.setAnimCircularRevealDuration(2500); //int ms
+        configSplash.setBackgroundColor(R.color.color_menu_negro_bg); //any color you want form colors.xml
+        configSplash.setAnimCircularRevealDuration(0); //int ms
         configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);  //or Flags.REVEAL_LEFT
         configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM); //or Flags.REVEAL_TOP
 
         //Choose LOGO OR PATH; if you don't provide String value for path it's logo by default
 
         //Customize Logo
-        configSplash.setLogoSplash(R.mipmap.ic_launcher); //or any other drawable
-        configSplash.setAnimLogoSplashDuration(3000); //int ms
-        configSplash.setAnimLogoSplashTechnique(Techniques.FadeInUp); //choose one form Techniques (ref: https://github.com/daimajia/AndroidViewAnimations)
+        configSplash.setLogoSplash(R.drawable.ic_logo); //or any other drawable
+        configSplash.setAnimLogoSplashDuration(2000); //int ms
+        configSplash.setAnimLogoSplashTechnique(Techniques.ZoomIn); //choose one form Techniques (ref: https://github.com/daimajia/AndroidViewAnimations)
 
 
-        //Customize Path
+        /*//Customize Path
         //configSplash.setPathSplash(Constants.DROID_LOGO); //set path String
         configSplash.setOriginalHeight(400); //in relation to your svg (path) resource
         configSplash.setOriginalWidth(400); //in relation to your svg (path) resource
@@ -44,15 +44,15 @@ public class SplashAwesome extends AwesomeSplash {
         configSplash.setPathSplashStrokeSize(3); //I advise value be <5
         configSplash.setPathSplashStrokeColor(R.color.primary); //any color you want form colors.xml
         configSplash.setAnimPathFillingDuration(3000);
-        configSplash.setPathSplashFillColor(android.R.color.white); //path object filling color
+        configSplash.setPathSplashFillColor(android.R.color.white); //path object filling color*/
 
 
         //Customize Title
-        configSplash.setTitleSplash("My Awesome App");
+        configSplash.setTitleSplash("SHOP CENTER");
         configSplash.setTitleTextColor(android.R.color.white);
-        configSplash.setTitleTextSize(30f); //float value
+        configSplash.setTitleTextSize(40f); //float value
+        configSplash.setAnimTitleTechnique(Techniques.SlideInUp);
         configSplash.setAnimTitleDuration(3000);
-        configSplash.setAnimTitleTechnique(Techniques.FadeIn);
         //configSplash.setTitleFont("fonts/myfont.ttf"); //provide string to your font located in assets/fonts/
 
     }

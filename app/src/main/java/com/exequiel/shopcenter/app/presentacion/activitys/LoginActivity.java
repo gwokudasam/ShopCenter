@@ -34,7 +34,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this,DetalleComercioActivity.class);
+        Intent intent = new Intent(this,GralMenuActivity.class);
         startActivity(intent);
     }
 }

@@ -8,7 +8,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="30dp">
+        android:padding="30dp"
+        android:background="@android:color/white">
 
         <LinearLayout
             android:orientation="vertical"
@@ -24,7 +25,7 @@
                 android:scaleType="fitXY"
                 android:layout_alignParentTop="true"
                 android:layout_alignLeft="@+id/linearLayout7"
-                android:src="@drawable/ic_launcher"
+                android:src="@drawable/ic_logo"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
@@ -57,12 +58,13 @@
                 android:textColorHint="#FF858583"
                 android:gravity="bottom|left"
                 android:inputType="textEmailAddress"
-                android:maxLength="13"
+                android:maxLength="35"
                 android:layout_gravity="bottom"
                 android:text=""
                 android:layout_marginBottom="25dp"
                 android:hint="Correo E-mail"
                 android:textSize="12sp"
+                android:textColor="@color/primary"
                 android:paddingBottom="10dp" />
 
             <EditText
@@ -73,12 +75,13 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColorHint="#FF858583"
                 android:gravity="left"
-                android:maxLength="4"
+                android:maxLength="15"
                 android:layout_marginBottom="25dp"
                 android:text=""
                 android:hint="Contraseña"
                 android:textSize="12sp"
                 android:paddingBottom="10dp"
+                android:textColor="@color/primary"
                 android:inputType="textPassword" />
 
             <Button
@@ -91,16 +94,26 @@
                 android:textColor="@android:color/white"
                 />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#44619d"
+                android:id="@+id/activity_login_btn_register"
+                android:layout_weight="0"
+                android:textColor="@android:color/white"
+                android:text="Login con Facebook"
+                android:layout_marginTop="10dp" />
+
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="28dp"
             android:layout_above="@+id/relativeLayout"
             android:layout_alignLeft="@+id/relativeLayout"
-            android:id="@+id/linearLayout6">
+            android:id="@+id/linearLayout6"
+            android:layout_marginBottom="20dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -112,25 +125,14 @@
                 android:background="@drawable/layer_button_line"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="20dp" />
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="#44619d"
-                android:id="@+id/activity_login_btn_register"
-                android:layout_weight="0"
-                android:layout_marginBottom="10dp"
-                android:textColor="@android:color/white"
-                android:text="Login con Facebook" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@color/color_azul_oscuro_gral"
+                android:background="@drawable/select_btn_wizard_green"
                 android:id="@+id/btn_pruebe_app"
-                android:layout_weight="0"
                 android:textColor="@android:color/white"
                 android:text="Pruebe la app" />
         </LinearLayout>

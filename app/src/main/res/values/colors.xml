@@ -2,6 +2,7 @@
 <resources>
     <!-- colors -->
     <color name="primary">#FF47B612</color>
+    <color name="primary_transparent">#B247B612</color>
     <color name="primaryDark">#FF47B612</color>
     <color name="colorAccent">#FF4081</color>
     <color name="verde">#FF24C065</color>
@@ -15,5 +16,10 @@
     <color name="button_background_login">#353B4A</color>
     <color name="color_gris_background">#FFECECEC</color>
 
+    <color name="button_background_wizard">#80BC3D</color>
+    <color name="button_background_wizard_press">#BDD89C</color>
+
+    <color name="color_contact_form_text">#888888</color>
+    <color name="color_contact_form_border">#cccccc</color>
 
 </resources>

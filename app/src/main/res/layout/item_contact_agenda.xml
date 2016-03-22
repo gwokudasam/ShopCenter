@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="4dp"
-    card_view:cardElevation="0dp"
+    card_view:cardElevation="2dp"
     card_view:cardPreventCornerOverlap="false"
     card_view:cardUseCompatPadding="true">
 
@@ -15,12 +15,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:tag="front"
-        android:background="@drawable/layer_button_line">
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="90dp" >
+            android:layout_height="wrap_content" >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -89,7 +90,9 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="Pedí todo lo que quieras"
-                        android:layout_alignParentTop="true" />
+                        android:layout_alignParentTop="true"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -104,20 +107,12 @@
             android:gravity="center"
             android:layout_marginRight="10dp">
 
-            <TextView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="1"
-                android:id="@+id/textView37"
-                android:background="@drawable/ic_statusbar_badge"
-                android:textSize="15sp"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true" />
+            <android.support.v7.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                app:buttonTint="@color/primary"
+                app:switchPadding="10dp" />
 
         </LinearLayout>
 

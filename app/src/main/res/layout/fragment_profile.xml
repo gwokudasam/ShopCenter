@@ -29,125 +29,139 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <RelativeLayout
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/primary">
+                    android:layout_margin="8dp"
+                    app:contentPadding="5dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="@color/primary"
+                    >
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="@dimen/image_width"
-                        android:layout_height="@dimen/image_width"
-                        android:layout_gravity="center"
-                        android:src="@drawable/images"
-                        app:border_color="#ffd5d5d5"
-                        app:border_width="0.5dp"
-                        app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
-                        android:id="@+id/circle_image_view"
-                        android:visibility="visible"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="40dp" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fragment_my_account_logued_img_add"
-                        android:src="@drawable/ic_my_account_avatar_add"
-                        android:layout_marginEnd="10dp"
-                        android:layout_alignBottom="@+id/circle_image_view"
-                        android:layout_alignRight="@+id/circle_image_view" />
-
-                    <LinearLayout
-                        android:orientation="vertical"
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/circle_image_view"
-                        android:layout_alignParentLeft="true"
-                        android:gravity="center_horizontal"
-                        android:paddingTop="15dp">
+                        android:layout_height="wrap_content">
 
-                        <TextView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/image_width"
+                            android:layout_height="@dimen/image_width"
+                            android:layout_gravity="center"
+                            android:src="@drawable/images"
+                            app:border_color="#ffd5d5d5"
+                            app:border_width="0.5dp"
+                            app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
+                            android:id="@+id/circle_image_view"
+                            android:visibility="visible"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="40dp" />
+
+                        <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="Julio Exequiel Zeballos" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="Córdoba, Argentina"
-                            android:id="@+id/textView17" />
+                            android:id="@+id/fragment_my_account_logued_img_add"
+                            android:src="@drawable/ic_my_account_avatar_add"
+                            android:layout_marginEnd="10dp"
+                            android:layout_alignBottom="@+id/circle_image_view"
+                            android:layout_alignRight="@+id/circle_image_view" />
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@+id/circle_image_view"
+                            android:layout_alignParentLeft="true"
                             android:gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/layer_line_buttom_my_account"
-                            android:layout_weight="1">
+                            android:paddingTop="15dp">
 
-                            <LinearLayout
-                                android:orientation="vertical"
+                            <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Julio Exequiel Zeballos"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Córdoba, Argentina"
+                                android:id="@+id/textView17"
+                                android:textColor="@android:color/white" />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
-                                android:id="@+id/fragment_my_account_logued_layout_jc"
-                                android:clickable="true">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="POINTS"
-                                    android:id="@+id/fragment_my_account_logued_txt_jc_point_title"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="12dp" />
+                                android:layout_margin="5dp"
+                                android:background="@drawable/layer_line_buttom_my_account"
+                                android:layout_weight="1">
 
-                                <TextView
+                                <LinearLayout
+                                    android:orientation="vertical"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="100"
-                                    android:id="@+id/fragment_my_account_logued_txt_jc_point_data"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="25dp" />
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:id="@+id/fragment_my_account_logued_layout_jc"
+                                    android:clickable="true">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="POINTS"
+                                        android:id="@+id/fragment_my_account_logued_txt_jc_point_title"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="100"
+                                        android:id="@+id/fragment_my_account_logued_txt_jc_point_data"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="25dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="VOUCHERS"
+                                        android:id="@+id/fragment_my_account_logued_txt_cant_vouchers_title"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="€5"
+                                        android:id="@+id/fragment_my_account_logued_txt_vaucher_values_data"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="25dp"/>
+                                </LinearLayout>
+
                             </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginTop="5dp"
-                                android:gravity="center_horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="VOUCHERS"
-                                    android:id="@+id/fragment_my_account_logued_txt_cant_vouchers_title"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="12dp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="€5"
-                                    android:id="@+id/fragment_my_account_logued_txt_vaucher_values_data"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="25dp"/>
-                            </LinearLayout>
-
                         </LinearLayout>
-                    </LinearLayout>
 
 
-                </RelativeLayout>
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -188,13 +202,14 @@
 
                                 <EditText
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="35dp"
                                     android:id="@+id/activity_register_edit_first_name"
                                     android:maxLength="25"
                                     android:inputType="textPersonName"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:layout_marginBottom="5dp"
-                                    android:gravity="bottom" />
+                                    android:gravity="bottom"
+                                    android:background="@drawable/layer_button_line" />
 
 
                             </LinearLayout>
@@ -242,14 +257,15 @@
 
                             <EditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="35dp"
                                 android:id="@+id/activity_register_edit_middle_name"
-                                android:layout_weight="0"
                                 android:maxLength="10"
                                 android:gravity="bottom"
                                 android:inputType="textPersonName"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:layout_marginBottom="5dp" />
+                                android:layout_marginBottom="5dp"
+                                android:autoText="false"
+                                android:background="@drawable/layer_button_line" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -269,14 +285,14 @@
 
                             <EditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="35dp"
                                 android:id="@+id/activity_register_edit_last_name"
-                                android:layout_weight="0"
                                 android:maxLength="20"
                                 android:gravity="bottom"
                                 android:inputType="textPersonName"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:layout_marginBottom="5dp" />
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/layer_button_line" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -296,14 +312,14 @@
 
                             <EditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="35dp"
                                 android:id="@+id/activity_register_edit_email"
-                                android:layout_weight="1"
                                 android:maxLength="35"
                                 android:gravity="bottom"
                                 android:inputType="textEmailAddress"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:layout_marginBottom="5dp" />
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/layer_button_line" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -321,5 +337,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="false" />
 </LinearLayout>
