@@ -87,17 +87,14 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="Login"
-                android:background="@color/primary"
-                android:id="@+id/activity_login_btn_login"
-                android:layout_weight="0"
+                android:background="@drawable/select_btn_wizard_green"
                 android:textColor="@android:color/white"
-                />
+                android:text="Login" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="#44619d"
+                android:background="@drawable/select_btn_wizard_blue_facebook"
                 android:id="@+id/activity_login_btn_register"
                 android:layout_weight="0"
                 android:textColor="@android:color/white"

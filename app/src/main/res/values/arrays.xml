@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="registration_titles">
-        <item>Mrs</item>
-        <item>Ms</item>
-        <item>Miss</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
+        <item>Otro</item>
     </array>
 
     <array name="registration_countries">

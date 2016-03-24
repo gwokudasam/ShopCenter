@@ -2,6 +2,7 @@
 <resources>
     <!-- colors -->
     <color name="primary">#FF47B612</color>
+    <color name="primary_press">#FF40A310</color>
     <color name="primary_transparent">#B247B612</color>
     <color name="primaryDark">#FF47B612</color>
     <color name="colorAccent">#FF4081</color>
@@ -21,5 +22,8 @@
 
     <color name="color_contact_form_text">#888888</color>
     <color name="color_contact_form_border">#cccccc</color>
+
+    <color name="color_blue_facebook">#44619d</color>
+    <color name="color_blue_transparent_facebook">#C844619D</color>
 
 </resources>

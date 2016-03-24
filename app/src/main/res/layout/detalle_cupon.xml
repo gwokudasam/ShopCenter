@@ -206,7 +206,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TOMAR"
+                android:layout_margin="5dp"
                 android:id="@+id/button3"
+                android:textColor="@android:color/white"
+                android:background="@drawable/select_btn_azul_oscuro"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true" />
         </RelativeLayout>

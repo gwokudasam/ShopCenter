@@ -93,6 +93,8 @@ public class GralMenuActivity extends BaseActivity {
         NavItms.add(new ItemObject(titulos[5], R.drawable.ic_done_white_24px));
         NavItms.add(new ItemObject(titulos[6], R.drawable.ic_done_white_24px));
         NavItms.add(new ItemObject(titulos[7], R.drawable.ic_done_white_24px));
+        NavItms.add(new ItemObject(titulos[8], R.drawable.ic_done_white_24px));
+
 
 
         //Declaramos y seteamos nuestro adaptador al cual le pasamos el array con los titulos

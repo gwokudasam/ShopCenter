@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical"
-            android:background="@color/verde"
+            android:background="@color/primary"
             android:id="@+id/order_item_layout_color"
             android:layout_alignParentLeft="true" />
 
