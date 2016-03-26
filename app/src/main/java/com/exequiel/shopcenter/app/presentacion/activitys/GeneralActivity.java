@@ -9,19 +9,27 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.ContextMenu;
 import android.view.Gravity;
+import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.exequiel.shopcenter.R;
 import com.exequiel.shopcenter.app.data.UtilPreferences;
+import com.exequiel.shopcenter.app.presentacion.adapters.Holders.ItemMenuLateralHolder;
 import com.exequiel.shopcenter.app.presentacion.adapters.ItemObject;
 import com.exequiel.shopcenter.app.presentacion.adapters.NavigationAdapter;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.exequiel.shopcenter.app.presentacion.fragments.AgendaFragment;
+import com.exequiel.shopcenter.app.presentacion.fragments.ContactFragment;
+import com.exequiel.shopcenter.app.presentacion.fragments.CuponesFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.DetalleProductoFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.HomeFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.ListProductsFragment;
@@ -35,7 +43,7 @@ import java.util.ArrayList;
 import butterknife.InjectView;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class GralMenuActivity extends BaseActivity {
+public class GeneralActivity extends BaseActivity {
 
     @InjectView(R.id.drawer_layout)
     protected DrawerLayout NavDrawerLayout;
@@ -52,16 +60,16 @@ public class GralMenuActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState, R.layout.activity_menu);
-        HandleFragmentsActivityGral.changeFragment(AgendaFragment.class, getSupportFragmentManager());
         initMenuHeader();
         initNavigationOptions();
         mToolbar        = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle("titulo");
         setSupportActionBar(mToolbar);
-
         final ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
+        HandleFragmentsActivityGral.changeFragment(HomeFragment.class, getSupportFragmentManager());
     }
+
 
     private void initMenuHeader() {
         View header = getLayoutInflater().inflate(R.layout.header, null);
@@ -93,22 +101,94 @@ public class GralMenuActivity extends BaseActivity {
         NavItms.add(new ItemObject(titulos[5], R.drawable.ic_done_white_24px));
         NavItms.add(new ItemObject(titulos[6], R.drawable.ic_done_white_24px));
         NavItms.add(new ItemObject(titulos[7], R.drawable.ic_done_white_24px));
-        NavItms.add(new ItemObject(titulos[8], R.drawable.ic_done_white_24px));
+        NavDrawerLayout.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+            @Override
+            public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+                Log.i("Menu lateral", "onCreateContextMenu");
 
-
-
-        //Declaramos y seteamos nuestro adaptador al cual le pasamos el array con los titulos
+            }
+        });
         NavAdapter = new NavigationAdapter(this, NavItms);
         NavList.setAdapter(NavAdapter);
 
-        //Establecemos la accion al clickear sobre cualquier item del menu.
-        //De la misma forma que hariamos en una app comun con un listview.
+        NavList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("Menu lateral", "long lstener");
+                return false;
+            }
+        });
+
+        NavList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("Menu lateral", "selected");
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                Log.i("Menu lateral", "nothing selected");
+
+            }
+        });
         NavList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
+                navigationOptionSelected(position);
+                seleccionarItem(position);
             }
+
         });
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        toggleDrawer();
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void seleccionarItem(int position){
+        int childCount = NavList.getChildCount();
+        for (int i = 0; i < childCount; i++)
+        {
+            View v = NavList.getChildAt(i);
+            if (i!=0&&i!=position){
+                if (position!=0)
+                    ((ItemMenuLateralHolder) v.getTag()).setItemUnselect();
+            }else if(i!=0){
+                ((ItemMenuLateralHolder) v.getTag()).setItemSelected();
+            }
+        }
+    }
+
+    private void navigationOptionSelected(int position) {
+        switch (position) {
+            case 1:
+                HandleFragmentsActivityGral.changeFragment(HomeFragment.class, getSupportFragmentManager());
+                break;
+            case 2:
+                HandleFragmentsActivityGral.changeFragment(ProfileFragment.class, getSupportFragmentManager());
+                break;
+            case 3:
+                HandleFragmentsActivityGral.changeFragment(CuponesFragment.class, getSupportFragmentManager());
+                break;
+            case 4:
+                HandleFragmentsActivityGral.changeFragment(AgendaFragment.class, getSupportFragmentManager());
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                HandleFragmentsActivityGral.changeFragment(ContactFragment.class, getSupportFragmentManager());
+                break;
+        }
+        if (position!=0)
+            closeDrawer();
+    }
+
 
     public void toggleDrawer() {
         if(!NavDrawerLayout.isDrawerOpen(Gravity.LEFT))
@@ -125,5 +205,13 @@ public class GralMenuActivity extends BaseActivity {
     @Override
     public void iniciarPresentacion() {
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (NavDrawerLayout.isDrawerOpen(Gravity.LEFT))
+            NavDrawerLayout.closeDrawer(Gravity.LEFT);
+        else
+            super.onBackPressed();
     }
 }

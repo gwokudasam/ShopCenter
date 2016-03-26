@@ -11,6 +11,8 @@
 
     <color name="color_menu_negro_separador">#FF0E1518</color>
     <color name="color_menu_negro_bg">#212425</color>
+    <color name="color_menu_negro_selected_bg">#FF131413</color>
+
     <color name="color_menu_txt_color">#FF687780</color>
     <color name="color_menu_negro_claro_img">#96424242</color>
     <color name="color_azul_oscuro_gral">#455057</color>
@@ -22,6 +24,8 @@
 
     <color name="color_contact_form_text">#888888</color>
     <color name="color_contact_form_border">#cccccc</color>
+
+    <color name="color_gris_bg">#f0f0f0</color>
 
     <color name="color_blue_facebook">#44619d</color>
     <color name="color_blue_transparent_facebook">#C844619D</color>

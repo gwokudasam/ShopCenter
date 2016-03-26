@@ -2,14 +2,14 @@ package com.exequiel.shopcenter.app.presentacion.activitys;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.exequiel.shopcenter.R;
-import com.exequiel.shopcenter.app.presentacion.fragments.DetalleProductoFragment;
-import com.exequiel.shopcenter.app.presentacion.fragments.handle.HandleFragmentsActivityGral;
+
+import butterknife.InjectView;
+import butterknife.OnClick;
 
 /**
  * Created by exequiel on 19/03/2016.
@@ -26,6 +26,22 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         btnProbarApp.setOnClickListener(this);
     }
 
+    @OnClick({R.id.tx_registrarse, R.id.tx_perdi_pass})
+    public void click(View v){
+        switch (v.getId()){
+            case R.id.tx_registrarse:{
+                Intent intent = new Intent(this,RegistrarseActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.tx_perdi_pass:{
+                Intent intent = new Intent(this,ForgotPassActivity.class);
+                startActivity(intent);
+                break;
+            }
+        }
+
+    }
 
     @Override
     public void iniciarPresentacion() {
@@ -34,7 +50,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this,GralMenuActivity.class);
+        Intent intent = new Intent(this,GeneralActivity.class);
         startActivity(intent);
     }
 }

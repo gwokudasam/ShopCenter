@@ -30,7 +30,7 @@
         </activity>
 
         <activity
-            android:name=".app.presentacion.activitys.GralMenuActivity"
+            android:name=".app.presentacion.activitys.GeneralActivity"
             android:screenOrientation="portrait">
         </activity>
 
@@ -46,6 +46,21 @@
 
         <activity
             android:name=".app.presentacion.activitys.DetalleComercioActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".app.presentacion.activitys.ForgotPassActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".app.presentacion.activitys.RegistrarseActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".app.presentacion.activitys.DetalleProductoActivity"
             android:screenOrientation="portrait">
         </activity>
 

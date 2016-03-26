@@ -35,7 +35,7 @@
                     android:layout_margin="8dp"
                     app:contentPadding="5dp"
                     app:cardElevation="3dp"
-                    app:cardBackgroundColor="@color/primary"
+                    app:cardBackgroundColor="@color/color_menu_negro_bg"
                     >
 
                     <RelativeLayout
@@ -171,157 +171,253 @@
                     android:layout_gravity="bottom"
                     android:layout_margin="30dp">
 
-                    <LinearLayout
-                        android:orientation="vertical"
+                    <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:weightSum="1">
+                        android:fillViewport="true">
 
                         <LinearLayout
-                            android:orientation="horizontal"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
 
                             <LinearLayout
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_weight="1">
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="bottom">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="NOMBRE"
-                                    android:id="@+id/textView11"
-                                    android:layout_weight="1" />
-
-                                <EditText
+                                <LinearLayout
+                                    android:orientation="vertical"
                                     android:layout_width="match_parent"
-                                    android:layout_height="35dp"
-                                    android:id="@+id/activity_register_edit_first_name"
-                                    android:maxLength="25"
-                                    android:inputType="textPersonName"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:layout_marginBottom="5dp"
-                                    android:gravity="bottom"
-                                    android:background="@drawable/layer_button_line" />
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:weightSum="1">
 
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp">
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:paddingBottom="20dp">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:text="SEXO"
+                                                android:textColor="@android:color/black"
+                                                android:layout_marginBottom="15dp"
+                                                android:gravity="center_horizontal"/>
+
+                                            <Spinner
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/activity_registration_spn_title"
+                                                android:background="@drawable/general_bg_spinner"
+                                                android:entries="@array/registration_titles"
+                                                android:gravity="center" />
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="10dp">
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:layout_weight="1">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:text="NOMBRE"
+                                                android:id="@+id/textView11"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center_horizontal"
+                                                android:layout_marginBottom="15dp" />
+
+                                            <EditText
+                                                android:layout_width="match_parent"
+                                                android:layout_height="35dp"
+                                                android:id="@+id/activity_register_edit_first_name"
+                                                android:maxLength="25"
+                                                android:inputType="textPersonName"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:layout_marginBottom="5dp"
+                                                android:gravity="bottom"
+                                                android:background="@drawable/selector_edit_text_lines_green" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="bottom"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="APELLIDO"
+                                            android:id="@+id/textView12"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginBottom="15dp" />
+
+                                        <EditText
+                                            android:layout_width="match_parent"
+                                            android:layout_height="35dp"
+                                            android:id="@+id/activity_register_edit_middle_name"
+                                            android:maxLength="10"
+                                            android:gravity="bottom"
+                                            android:inputType="textPersonName"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:layout_marginBottom="5dp"
+                                            android:autoText="false"
+                                            android:background="@drawable/selector_edit_text_lines_green" />
+                                        />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="bottom"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="CUMPLEAÑOS"
+                                            android:id="@+id/textView13"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginBottom="15dp" />
+
+                                        <EditText
+                                            android:layout_width="match_parent"
+                                            android:layout_height="35dp"
+                                            android:id="@+id/activity_register_edit_last_name"
+                                            android:maxLength="20"
+                                            android:gravity="bottom"
+                                            android:inputType="textPersonName"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:layout_marginBottom="5dp"
+                                            android:background="@drawable/selector_edit_text_lines_green" />
+                                        />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="bottom"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="E-MAIL"
+                                            android:id="@+id/textView14"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginBottom="15dp" />
+
+                                        <EditText
+                                            android:layout_width="match_parent"
+                                            android:layout_height="35dp"
+                                            android:id="@+id/activity_register_edit_email"
+                                            android:maxLength="35"
+                                            android:gravity="bottom"
+                                            android:inputType="textEmailAddress"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:layout_marginBottom="5dp"
+                                            android:background="@drawable/selector_edit_text_lines_green" />
+                                        />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="bottom"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="CONTRASEÑA"
+                                            android:layout_gravity="center_horizontal" />
+
+                                        <EditText
+                                            android:layout_width="match_parent"
+                                            android:layout_height="35dp"
+                                            android:id="@+id/activity_register_edit_pass"
+                                            android:maxLength="35"
+                                            android:gravity="bottom"
+                                            android:inputType="textEmailAddress"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:layout_marginBottom="5dp"
+                                            android:background="@drawable/selector_edit_text_lines_green" />
+                                        />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="bottom"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="Ya posee cuenta? Login"
+                                            android:layout_gravity="center"
+                                            android:textStyle="bold" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="10dp">
-
-                                <ImageButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/fragment_edit_perfil_imgbtn_man"
-                                    android:background="@drawable/select_ic_register_men"
-                                    android:layout_marginRight="6dp" />
-
-                                <ImageButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/fragment_edit_perfil_imgbtn_woman"
-                                    android:background="@drawable/register_woman_selector"
-                                    android:layout_marginLeft="6dp" />
-
-                            </LinearLayout>
-
                         </LinearLayout>
 
-
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="bottom"
-                            android:layout_marginBottom="10dp"
-                            android:layout_marginTop="10dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:text="APELLIDO"
-                                android:id="@+id/textView12" />
-
-                            <EditText
-                                android:layout_width="match_parent"
-                                android:layout_height="35dp"
-                                android:id="@+id/activity_register_edit_middle_name"
-                                android:maxLength="10"
-                                android:gravity="bottom"
-                                android:inputType="textPersonName"
-                                android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:layout_marginBottom="5dp"
-                                android:autoText="false"
-                                android:background="@drawable/layer_button_line" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="bottom"
-                            android:layout_marginBottom="10dp"
-                            android:layout_marginTop="10dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:text="CUMPLEAÑOS"
-                                android:id="@+id/textView13" />
-
-                            <EditText
-                                android:layout_width="match_parent"
-                                android:layout_height="35dp"
-                                android:id="@+id/activity_register_edit_last_name"
-                                android:maxLength="20"
-                                android:gravity="bottom"
-                                android:inputType="textPersonName"
-                                android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:layout_marginBottom="5dp"
-                                android:background="@drawable/layer_button_line" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="bottom"
-                            android:layout_marginBottom="10dp"
-                            android:layout_marginTop="10dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:text="E-MAIL"
-                                android:id="@+id/textView14" />
-
-                            <EditText
-                                android:layout_width="match_parent"
-                                android:layout_height="35dp"
-                                android:id="@+id/activity_register_edit_email"
-                                android:maxLength="35"
-                                android:gravity="bottom"
-                                android:inputType="textEmailAddress"
-                                android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:layout_marginBottom="5dp"
-                                android:background="@drawable/layer_button_line" />
-                        </LinearLayout>
-                    </LinearLayout>
+                    </ScrollView>
 
                 </LinearLayout>
 

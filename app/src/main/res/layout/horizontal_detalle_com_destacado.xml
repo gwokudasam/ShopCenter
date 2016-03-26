@@ -6,7 +6,9 @@
     android:layout_height="wrap_content"
     android:clickable="true"
     card_view:cardElevation="1dp"
-    android:layout_margin="5dp">
+    android:layout_margin="5dp"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground">
 
     <LinearLayout
         android:orientation="vertical"

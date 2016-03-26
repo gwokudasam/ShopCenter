@@ -54,6 +54,7 @@
                 android:text="351 - 4123548"
                 android:id="@+id/contac_txt_phone_number"
                 android:textColor="@color/primary"
+                android:layout_marginBottom="10dp"
                 android:layout_gravity="center_horizontal"/>
 
             <TextView

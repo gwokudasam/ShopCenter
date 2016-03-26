@@ -23,6 +23,7 @@
             android:src="@drawable/com_facebook_profile_picture_blank_square"
             app:border_color="@android:color/white"
             app:border_width="1dp"
+            android:id="@+id/last_comercio_circle_img"
             app:layout_behavior="com.exequiel.shopcenter.componentes.AvatarImageBehavior"
             android:visibility="visible"
             android:layout_centerInParent="true" />

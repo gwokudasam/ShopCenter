@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="250dp"
+    android:layout_height="350dp"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_dialog_jc_points_container"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@drawable/layer_button_line">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Descripción"
+                        android:gravity="center_horizontal"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/dialog_jc_cruz"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_cross"
+                        android:layout_alignParentRight="true" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="hdfjajfldjhfoahgpolf daofah flkdasjf dasklhfoñahdf ñlahfnldjfoah fñjkldahfhñfolhjdndlñfahjnoñfhjqpoehojtfnlajgnfnflajshfipuoewhfrpiaouqhnfiljasbgfiolashfpoauhnfpoiuqwhefouiqawbfoilreahtfiuwenhftoilaerbfoilerahhfbenrgfioluiolhweghfuabergfoiulahnhfrujerffffffffffffff+    &lt;TextView         android:layout_width=&quot;wrap_content&quot;         android:layout_height=&quot;wrap_content&quot;         android:textAppearance=&quot;?android:attr/textAppearanceSmall&quot;         android:text=&quot;Small Text&quot;         android:id=&quot;@+id/textView19&quot; />     &lt;TextView         android:layout_width=&quot;wrap_content&quot;         android:layout_height=&quot;wrap_content&quot;         android:textAppearance=&quot;?android:attr/textAppearanceSmall&quot;         android:text=&quot;Small Text&quot;         android:id=&quot;@+id/textView19&quot; />     &lt;TextView         android:layout_width=&quot;wrap_content&quot;         android:layout_height=&quot;wrap_content&quot;         android:textAppearance=&quot;?android:attr/textAppearanceSmall&quot;         android:text=&quot;Small Text&quot;         android:id=&quot;@+id/textView19&quot; />     &lt;TextView         android:layout_width=&quot;wrap_content&quot;         android:layout_height=&quot;wrap_content&quot;         android:textAppearance=&quot;?android:attr/textAppearanceSmall&quot;         android:text=&quot;Small Text&quot;         android:id=&quot;@+id/textView19&quot; />     &lt;TextView         android:layout_width=&quot;wrap_content&quot;         android:layout_height=&quot;wrap_content&quot;         android:textAppearance=&quot;?android:attr/textAppearanceSmall&quot;         android:text=&quot;Small Text&quot;         android:id=&quot;@+id/textView19&quot; /> fasssssssssssssssssssssssss"
+                    android:id="@+id/textView19"
+                    android:gravity="center_horizontal"/>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

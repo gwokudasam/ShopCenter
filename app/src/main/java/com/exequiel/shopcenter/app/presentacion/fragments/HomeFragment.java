@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import com.exequiel.shopcenter.R;
 import com.exequiel.shopcenter.app.presentacion.adapters.CustomLinearLayoutManager;
 import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComentarioComercioAdapter;
+import com.exequiel.shopcenter.app.presentacion.adapters.Holders.ItemMenuLateralHolder;
 import com.exequiel.shopcenter.app.presentacion.adapters.ItemComercioNuevo;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.exequiel.shopcenter.framework.ui.fragment.FrameworkBaseFragment;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 
 import butterknife.InjectView;
 import butterknife.OnClick;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by exequiel on 09/07/2015.
@@ -35,14 +37,16 @@ public class HomeFragment extends FrameworkBaseFragment {
 
     private static final String TAG_FRAGMENT = "HOME_FRAGMENT";
 
-    private static String URL_COLLECTION = "http://kipling.com";
-
-    private boolean flag = false;
-
     //ViewPager
-    CirclePageIndicator titlePageIndicator;
-    ViewPager viewPager;
-    WizardInicialAdapter wizardInicialAdapter;
+    @InjectView(R.id.indicator)
+    protected CirclePageIndicator titlePageIndicator;
+
+    @InjectView(R.id.pager)
+    protected ViewPager viewPager;
+
+    RecyclerView recyclerView3;
+
+    private WizardInicialAdapter wizardInicialAdapter;
 
 
     @Nullable
@@ -58,7 +62,7 @@ public class HomeFragment extends FrameworkBaseFragment {
         //ViewPager
 
         ItemComercioNuevo recyclerViewAdapter3 = new ItemComercioNuevo();
-        RecyclerView recyclerView3 = (RecyclerView) view.findViewById(R.id.recyclerviewlastcomer);
+        recyclerView3 = (RecyclerView) view.findViewById(R.id.recyclerviewlastcomer);
         final CustomLinearLayoutManager layoutManager3 = new CustomLinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         // layoutManager = new LinearLayoutManager(this);
@@ -66,7 +70,25 @@ public class HomeFragment extends FrameworkBaseFragment {
         recyclerView3.setLayoutManager(layoutManager3);
         recyclerView3.setAdapter(recyclerViewAdapter3);
         recyclerView3.setNestedScrollingEnabled(false);
+
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        deseleccionarItems();
+    }
+
+    private void deseleccionarItems(){
+        CircleImageView imgComercio;
+        int childCount = recyclerView3.getChildCount();
+        for (int i = 0; i < childCount; i++)
+        {
+            View v = recyclerView3.getChildAt(i);
+            imgComercio = (CircleImageView) v.findViewById(R.id.last_comercio_circle_img);
+            imgComercio.setBorderColorResource(android.R.color.white);
+        }
     }
 
     @Override

@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.exequiel.shopcenter.R;
+import com.exequiel.shopcenter.app.presentacion.adapters.Holders.ItemMenuLateralHolder;
 
 import java.util.ArrayList;
 
@@ -50,18 +51,22 @@ public class NavigationAdapter extends BaseAdapter {
         if (convertView == null) {
             view = new NavigationItem();
             convertView = inflator.inflate(R.layout.item_menu, null);
-
-            view.title = (TextView) convertView.findViewById(R.id.drawer_nav_title);
-            view.icon = (ImageView) convertView.findViewById(R.id.drawer_nav_icon);;
-
-            convertView.setTag(view);
+            ItemMenuLateralHolder holder = new ItemMenuLateralHolder(convertView);
+            holder.setBadge(position);
+            holder.setTitulo(itm.getTitulo());
+            holder.setImageResource(itm.getIcono());
+            convertView.setTag(holder);
+            if(position==0)
+                holder.setItemSelected();
         }
         else {
-            view = (NavigationItem) convertView.getTag();
+            ItemMenuLateralHolder holder = (ItemMenuLateralHolder) convertView.getTag();
         }
 
-        view.title.setText(itm.getTitulo());
-        view.icon.setImageResource(itm.getIcono());
         return convertView;
     }
+
+
+
+
 }

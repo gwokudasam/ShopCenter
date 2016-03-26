@@ -7,6 +7,7 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical"
 	tools:ignore="RtlHardcoded"
+	android:background="@color/color_gris_bg"
 	>
 
 	<android.support.design.widget.CoordinatorLayout
@@ -326,8 +327,7 @@
 										android:layout_width="wrap_content"
 										android:layout_height="wrap_content"
 										android:textAppearance="?android:attr/textAppearanceSmall"
-										android:text="wwww.prueba.com"
-										android:autoLink="web"
+										android:text="www.prueba.com"
 										android:textColor="@android:color/black"
 										android:padding="5dp"
 										android:id="@+id/textView33" />
@@ -353,7 +353,6 @@
 										android:layout_height="wrap_content"
 										android:textAppearance="?android:attr/textAppearanceSmall"
 										android:text="email@gmail.com"
-										android:autoLink="email"
 										android:textColor="@android:color/black"
 										android:padding="5dp"
 										android:id="@+id/textView44" />
@@ -400,8 +399,8 @@
 									android:layout_width="wrap_content"
 									android:layout_height="20dp"
 									android:text="Horarios"
-									android:id="@+id/button4"
-									android:background="@color/primary"
+									android:id="@+id/horario_btn"
+									android:background="@drawable/select_btn_wizard_green"
 									android:textColor="@android:color/white"
 									android:padding="3dp"
 									android:textSize="12sp"

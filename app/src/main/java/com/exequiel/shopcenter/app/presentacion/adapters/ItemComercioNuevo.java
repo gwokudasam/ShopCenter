@@ -30,6 +30,6 @@ public class ItemComercioNuevo extends RecyclerView.Adapter<DetalleComercioHoler
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 10;
     }
 }
