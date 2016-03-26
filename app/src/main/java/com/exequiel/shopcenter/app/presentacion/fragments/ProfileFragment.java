@@ -27,7 +27,6 @@ import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrHandler;
 import in.srain.cube.views.ptr.header.StoreHouseHeader;
-import jp.wasabeef.blurry.Blurry;
 
 /**
  * Created by exequiel on 10/03/2016.

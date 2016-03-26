@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import com.exequiel.shopcenter.R;
+import com.exequiel.shopcenter.app.presentacion.fragments.WebViewFragment;
 import com.exequiel.shopcenter.framework.ui.fragment.FrameworkBaseFragment;
 
 
@@ -51,4 +52,18 @@ public class HandleFragmentsActivityGral {
         ft.addToBackStack(null);
         ft.commit();
     }
+
+    public static void putWebFragment(FragmentManager fm, String url,int resource){
+        Bundle bundle=null;
+        if (url!=null) {
+            bundle = new Bundle();
+            bundle.putString(WebViewFragment.KEY_URL_LOAD, url);
+        }
+        WebViewFragment webFragment = new WebViewFragment();
+        FragmentTransaction ft = fm.beginTransaction();
+        webFragment.setArguments(bundle);
+        ft.replace(resource, webFragment, webFragment.getTagFragment());
+        ft.commit();
+    }
+
 }

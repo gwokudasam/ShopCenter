@@ -34,6 +34,7 @@ import com.exequiel.shopcenter.app.presentacion.fragments.DetalleProductoFragmen
 import com.exequiel.shopcenter.app.presentacion.fragments.HomeFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.ListProductsFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.ProfileFragment;
+import com.exequiel.shopcenter.app.presentacion.fragments.SocialTabFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.handle.HandleFragmentsActivityGral;
 import com.exequiel.shopcenter.componentes.util.UtilImagen;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -75,7 +76,7 @@ public class GeneralActivity extends BaseActivity {
         View header = getLayoutInflater().inflate(R.layout.header, null);
         CircleImageView imgAvatar = (CircleImageView)header.findViewById(R.id.circle_image_view);
         TextView name = (TextView) header.findViewById(R.id.drawer_img_user_name);
-        name.setText("RENATE SCHWARZLER");
+        name.setText("EXEQUIEL ZEBALLOS");
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -176,10 +177,12 @@ public class GeneralActivity extends BaseActivity {
                 HandleFragmentsActivityGral.changeFragment(AgendaFragment.class, getSupportFragmentManager());
                 break;
             case 5:
+                HandleFragmentsActivityGral.changeFragment(ListProductsFragment.class, getSupportFragmentManager());
                 break;
             case 6:
                 break;
             case 7:
+                HandleFragmentsActivityGral.changeFragment(SocialTabFragment.class, getSupportFragmentManager());
                 break;
             case 8:
                 HandleFragmentsActivityGral.changeFragment(ContactFragment.class, getSupportFragmentManager());

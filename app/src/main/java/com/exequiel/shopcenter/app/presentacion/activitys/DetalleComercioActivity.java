@@ -41,6 +41,7 @@ import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.List;
 
+import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -224,6 +225,11 @@ public class DetalleComercioActivity extends AppCompatActivity
         customDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         customDialog.setContentView(R.layout.dialog_horarios);
         customDialog.show();
+    }
+
+    @OnClick(R.id.fab1)
+    public void clickMenu(View v){
+
     }
 
     @Override
