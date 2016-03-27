@@ -4,8 +4,7 @@
     tools:context="com.centro.centroandroidapp.app.MainActivity">
 
     <item android:id="@+id/menu_share"
-        android:icon="@drawable/ic_heart_outline_white_24dp"
+        android:icon="@drawable/places_ic_search"
         app:showAsAction="always"
-        android:title="Agendar" />
-
+        android:title="Buscar" />
 </menu>

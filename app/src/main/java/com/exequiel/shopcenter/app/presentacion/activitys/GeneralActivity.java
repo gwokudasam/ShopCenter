@@ -1,43 +1,29 @@
 package com.exequiel.shopcenter.app.presentacion.activitys;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.exequiel.shopcenter.R;
-import com.exequiel.shopcenter.app.data.UtilPreferences;
 import com.exequiel.shopcenter.app.presentacion.adapters.Holders.ItemMenuLateralHolder;
 import com.exequiel.shopcenter.app.presentacion.adapters.ItemObject;
 import com.exequiel.shopcenter.app.presentacion.adapters.NavigationAdapter;
-import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.exequiel.shopcenter.app.presentacion.fragments.AgendaFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.ContactFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.CuponesFragment;
-import com.exequiel.shopcenter.app.presentacion.fragments.DetalleProductoFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.HomeFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.ListProductsFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.ProfileFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.SocialTabFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.handle.HandleFragmentsActivityGral;
-import com.exequiel.shopcenter.componentes.util.UtilImagen;
-import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
 
@@ -60,14 +46,14 @@ public class GeneralActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState, R.layout.activity_menu);
+        super.onCreate(savedInstanceState, R.layout.activity_gral_menu);
         initMenuHeader();
         initNavigationOptions();
-        mToolbar        = (Toolbar) findViewById(R.id.toolbar);
+        /*mToolbar        = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle("titulo");
         setSupportActionBar(mToolbar);
-        final ActionBar ab = getSupportActionBar();
-        ab.setDisplayHomeAsUpEnabled(true);
+        final ActionBar ab = getSupportActionBar();*/
+        //ab.setDisplayHomeAsUpEnabled(true);
         HandleFragmentsActivityGral.changeFragment(HomeFragment.class, getSupportFragmentManager());
     }
 
@@ -194,8 +180,10 @@ public class GeneralActivity extends BaseActivity {
 
 
     public void toggleDrawer() {
-        if(!NavDrawerLayout.isDrawerOpen(Gravity.LEFT))
+        if(!NavDrawerLayout.isDrawerOpen(Gravity.LEFT)){
+            NavList.setSelection(0);
             NavDrawerLayout.openDrawer(Gravity.LEFT);
+        }
         else
             NavDrawerLayout.closeDrawer(Gravity.LEFT);
     }

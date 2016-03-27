@@ -18,16 +18,40 @@
             android:id="@+id/recycler_products"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/cardview2"
             android:clipToPadding="false"
-            android:paddingTop="0dp"/>
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:layout_below="@+id/toolbar" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:layout_scrollFlags="enterAlways|scroll"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
 
         <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/floating_search_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:floatingSearch_searchBarMarginLeft="10dp"
-            app:floatingSearch_searchBarMarginTop="10dp"
-            app:floatingSearch_searchBarMarginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp"
+            app:floatingSearch_searchBarMarginLeft="5dp"
+            app:floatingSearch_searchBarMarginRight="5dp"
             app:floatingSearch_searchHint="Search..."
             app:floatingSearch_showSearchKey="false"
             app:floatingSearch_dismissOnOutsideTouch="true"
@@ -35,22 +59,6 @@
             app:floatingSearch_menu="@menu/menu_main"/>
 
     </RelativeLayout>
-
-    <RelativeLayout android:id="@+id/left_drawer"
-        android:layout_width="240dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:choiceMode="singleChoice"
-        android:dividerHeight="0dp"
-        android:background="@android:color/white">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="blank navigation drawer"/>
-    </RelativeLayout>
-
 
 
 </LinearLayout>

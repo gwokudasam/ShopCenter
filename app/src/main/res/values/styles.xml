@@ -29,4 +29,16 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
+    <style name="SearchView">
+        <item name="floatingSearch_backgroundColor">@color/color_menu_negro_bg</item>
+        <item name="floatingSearch_viewTextColor">@color/color_gris_bg</item>
+        <item name="floatingSearch_hintTextColor">@color/color_contact_form_border</item>
+        <item name="floatingSearch_dividerColor">@color/primary</item>
+        <item name="floatingSearch_clearBtnColor">@android:color/white</item>
+        <item name="floatingSearch_leftActionColor">@android:color/white</item>
+        <item name="floatingSearch_menuItemIconColor">@android:color/white</item>
+        <item name="floatingSearch_suggestionRightIconColor">@android:color/white</item>
+        <item name="floatingSearch_actionMenuOverflowColor">@android:color/white</item>
+    </style>
+
 </resources>

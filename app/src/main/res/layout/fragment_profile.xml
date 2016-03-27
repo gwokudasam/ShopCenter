@@ -6,6 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_app" />
+
     <in.srain.cube.views.ptr.PtrClassicFrameLayout
         android:id="@+id/fragment_rotate_header_with_view_group_frame"
         xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"

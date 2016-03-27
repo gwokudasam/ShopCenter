@@ -44,16 +44,33 @@
                 android:maxLines="2"
                 android:ellipsize="end" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Tipo de cupon"
-                android:id="@+id/textView28"
-                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
                 android:layout_above="@+id/textView29"
-                android:layout_alignParentLeft="true"
-                android:layout_marginBottom="10dp" />
+                android:id="@+id/linearLayout10"
+                android:background="@drawable/layer_item_my_account"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="La cocina"
+                    android:id="@+id/textView28"
+                    android:textColor="@color/color_menu_negro_claro_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Campaña comercial"
+                    android:textSize="10sp"
+                    android:textColor="#f37a00" />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -63,10 +80,10 @@
                 android:id="@+id/textView29"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:background="@color/primary"
-                android:textColor="@android:color/white"
+                android:textColor="@color/primary"
                 android:gravity="center"
                 android:padding="3dp" />
+
         </RelativeLayout>
 
     </LinearLayout>

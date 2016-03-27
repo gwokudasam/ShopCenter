@@ -7,6 +7,11 @@
     android:background="@color/color_gris_bg"
     android:layout_height="match_parent">
 
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_app" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -50,7 +55,9 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_margin="5dp">
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp">
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -61,17 +68,35 @@
                                 android:text="Nombre del cupon"
                                 android:textSize="18dp"
                                 android:maxLines="2"
+                                android:textColor="@color/button_background_login"
                                 android:ellipsize="end" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:id="@+id/textView28"
+                                android:orientation="vertical"
                                 android:layout_above="@+id/textView29"
-                                android:layout_alignParentLeft="true"
-                                android:layout_marginBottom="5dp"
-                                android:text="Tipo de cupon : PREMIO" />
+                                android:id="@+id/linearLayout11"
+                                android:background="@drawable/layer_item_my_account"
+                                android:paddingLeft="5dp"
+                                android:paddingBottom="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="La cocina"
+                                    android:id="@+id/textView37"
+                                    android:textColor="@color/color_menu_negro_claro_img" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="Campaña comercial"
+                                    android:textSize="10sp"
+                                    android:textColor="#f37a00" />
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -81,10 +106,10 @@
                                 android:id="@+id/textView29"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentLeft="true"
-                                android:background="@color/primary"
-                                android:textColor="@android:color/white"
+                                android:textColor="@color/primary"
+                                android:paddingTop="5dp"
                                 android:gravity="center"
-                                android:padding="3dp" />
+                                android:paddingBottom="5dp" />
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -110,6 +135,8 @@
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:text="Remeras gratis"
+                            android:textColor="@color/button_background_login"
+
                             android:id="@+id/textView35"
                             android:layout_marginTop="5dp" />
 
@@ -117,6 +144,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/button_background_login"
                             android:text="RTICULO NUEVO EN CAJA DE CARTON CON VENTANA EXHIBIDORA DE LA FAMOSA FIRMA HIGHWAY61 QUE FABRICA SOLO MINIATURAS DE COCHES AMERICANOS CON MUY ALTA CALIDAD Y DETALLE ABRE PUERTAS, CAPOT Y PORTON TRASE"
                             android:id="@+id/textView36"
                             android:maxLines="5"
@@ -142,6 +170,7 @@
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:text="Términos y condiciones del cupón"
+                            android:textColor="@color/button_background_login"
                             android:id="@+id/textView30"
                             android:layout_marginBottom="5dp"
                             android:layout_gravity="center_horizontal" />
@@ -156,6 +185,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/button_background_login"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:text="Válido hasta:"
                                 android:id="@+id/textView31" />
@@ -163,6 +193,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/button_background_login"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:text="22/05/2015"
                                 android:id="@+id/textView32"
@@ -174,6 +205,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/clear_btn_color"
                             android:text="ClubCupon | ClubCupon.com.ar - Descuentos hasta 60 ... www.clubcupon.com.ar/ Club Cupón - Prosciutto Caballito : Entrada + plato principal + bebida + postre + brindis para 2 personas. - Cupones de descuento hasta 60% en todas las ... ‎Viajes y Escapadas - ‎La Plata - ‎Ingresá - ‎Promociones Cupones nuevos · ImprimiTuCupon! Cupones de descuento ... www.imprimitucupon.com/ Encontrá cupones de descuento en un solo lugar. Cupones de descuentos, ofertas y promociones en tu ciudad de hasta el 90%. &quot;Just&quot; from &quot;The Bends&quot; 00:00 &quot;Paranoid android&quot; from &quot;OK Computer&quot; 03:53 &quot;Karma police&quot; from &quot;OK Computer&quot; 10:21 &quot;Creep&quot; from &quot; Pablo Honey&quot; 14:46 &quot;No surprises&quot; from &quot;OK Computer&quot; 19:24 &quot;High and Dry&quot; from &quot;The Bends&quot; 23:13 &quot;My iron lung&quot; from &quot;The Bends&quot; 27:31 &quot;There There&quot; from &quot;Hail to the Thief&quot; 32:07 &quot;Lucky&quot; from &quot;OK Computer&quot; 37:31 &quot;Fake Plastic Trees&quot; from &quot;The Bends&quot; 41:48 &quot;Idioteque&quot; from &quot;Kid A&quot; 46:37 &quot;2 + 2 = 5&quot; from &quot; Hail to the Thief&quot; 51:15 &quot;The Bends&quot; from &quot;The Bends&quot; 54:46 "
                             android:id="@+id/textView34"
                             android:layout_marginTop="5dp" />
