@@ -3,6 +3,7 @@ package com.exequiel.shopcenter.app.presentacion.fragments;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,6 +25,8 @@ import com.squareup.picasso.Picasso;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.InjectView;
 import butterknife.OnClick;
@@ -48,17 +51,42 @@ public class HomeFragment extends FrameworkBaseFragment {
 
     private WizardInicialAdapter wizardInicialAdapter;
 
+    int currentItem;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = onCreateView(inflater, container, savedInstanceState, R.layout.fragment_home);
+        final View view = onCreateView(inflater, container, savedInstanceState, R.layout.fragment_home);
         //ViewPager
         titlePageIndicator = (CirclePageIndicator) view.findViewById(R.id.indicator);
         viewPager = (ViewPager) view.findViewById(R.id.pager);
         wizardInicialAdapter = new WizardInicialAdapter(getFragmentManager());
         viewPager.setAdapter(wizardInicialAdapter);
         titlePageIndicator.setViewPager(viewPager);
+
+        final Handler handler = new Handler();
+
+        currentItem = viewPager.getCurrentItem();
+
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentItem == 3) {
+                    currentItem = 0;
+                }
+                viewPager.setCurrentItem(currentItem++, true);
+            }
+        };
+
+        final Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+
+        }, 1000, 4500);
+
         //ViewPager
 
         ItemComercioNuevo recyclerViewAdapter3 = new ItemComercioNuevo();

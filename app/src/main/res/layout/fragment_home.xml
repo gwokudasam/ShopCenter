@@ -117,54 +117,10 @@
                     android:layout_below="@+id/cardview2"
                     android:clipToPadding="false"
                     android:background="#f0f0f0"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:paddingTop="0dp"/>
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/linearLayout2"
-                    android:clickable="true"
-                    android:foreground="?android:selectableItemBackground"
-                    android:background="@drawable/layer_item_my_account" >
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:layout_marginLeft="10dp" >
-
-                        <ImageView
-                            android:id="@+id/drawer_nav_icon"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginRight="20dp"
-                            android:src="@drawable/ic_done_white_24px"
-                            android:layout_centerVertical="true"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="MI CUENTA"
-                            android:id="@+id/textView13"
-                            android:layout_marginRight="10dp" />
-
-                    </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/imageButton"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_my_account_arrow"
-                        android:background="@android:color/transparent"
-                        android:layout_marginBottom="10dp" />
-                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
