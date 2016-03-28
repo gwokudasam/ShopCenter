@@ -64,10 +64,24 @@ public class HomeFragment extends FrameworkBaseFragment {
         viewPager.setAdapter(wizardInicialAdapter);
         titlePageIndicator.setViewPager(viewPager);
 
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                currentItem=position;
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         final Handler handler = new Handler();
-
         currentItem = viewPager.getCurrentItem();
-
         final Runnable Update = new Runnable() {
             public void run() {
                 if (currentItem == 3) {
@@ -76,7 +90,6 @@ public class HomeFragment extends FrameworkBaseFragment {
                 viewPager.setCurrentItem(currentItem++, true);
             }
         };
-
         final Timer swipeTimer = new Timer();
         swipeTimer.schedule(new TimerTask() {
 
