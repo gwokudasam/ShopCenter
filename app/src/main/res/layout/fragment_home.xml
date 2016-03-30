@@ -88,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Small Text"
+                    android:text="NOVEDADES"
                     android:id="@+id/textView10"
                     android:paddingTop="7dp"
                     android:background="@color/primary"
@@ -170,6 +170,49 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/layer_item_my_account"
+                    android:id="@+id/linearLayout5"
+                    android:layout_marginTop="10dp" >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp" >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_done_white_24px"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="BUSCAR PRODUCTOS"
+                            android:layout_marginRight="10dp" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageButton4"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_my_account_arrow"
+                        android:background="@android:color/transparent"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/layer_item_my_account"
                     android:id="@+id/linearLayout4"
                     android:layout_marginTop="10dp" >
 
@@ -214,7 +257,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/layer_item_my_account"
-                    android:id="@+id/linearLayout5"
                     android:layout_marginTop="10dp" >
 
                     <LinearLayout
@@ -245,50 +287,6 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/imageButton4"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_my_account_arrow"
-                        android:background="@android:color/transparent"
-                        android:layout_marginBottom="10dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/layer_item_my_account"
-                    android:id="@+id/linearLayout5"
-                    android:layout_marginTop="10dp" >
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:layout_marginLeft="10dp" >
-
-                        <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginRight="20dp"
-                            android:src="@drawable/ic_done_white_24px"
-                            android:layout_centerVertical="true"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="BUSCAR PRODUCTOS"
-                            android:layout_marginRight="10dp" />
-
-                    </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/imageButton4"
                         android:layout_weight="1"
                         android:src="@drawable/ic_my_account_arrow"
                         android:background="@android:color/transparent"

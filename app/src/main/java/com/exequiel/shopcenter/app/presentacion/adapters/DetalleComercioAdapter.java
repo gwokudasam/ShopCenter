@@ -19,7 +19,7 @@ public class DetalleComercioAdapter extends RecyclerView.Adapter<DetalleComercio
 
     @Override
     public DetalleComercioHoler onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.horizontal_detalle_com_destacado,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_producto_deseo,parent,false);
         return new DetalleComercioHoler(v);
     }
 
