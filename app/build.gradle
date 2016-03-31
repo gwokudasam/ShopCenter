@@ -125,6 +125,9 @@ dependencies {
         transitive = true;
     }
 
+    //dependencia de pull zoom
+    compile 'com.github.frank-zhu:pullzoomview:1.0.0'
+
     //search bar
     compile 'com.github.arimorty:floatingsearchview:1.1.2'
 

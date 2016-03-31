@@ -397,10 +397,7 @@
                     android:clipToPadding="false"
                     android:background="@android:color/white"
                     android:paddingTop="0dp"/>
-
             </LinearLayout>
-
         </LinearLayout>
-
     </ScrollView>
 </LinearLayout>
