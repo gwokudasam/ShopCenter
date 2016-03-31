@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".app.presentacion.activitys.PullToZoomScrollActivity"
+            android:name=".app.presentacion.activitys.SplashAwesome"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -7,9 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
-import android.text.style.ForegroundColorSpan;
 import android.text.style.StrikethroughSpan;
-import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +16,6 @@ import android.widget.TextView;
 import com.exequiel.shopcenter.R;
 import com.exequiel.shopcenter.app.presentacion.adapters.CustomLinearLayoutManager;
 import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComentarioComercioAdapter;
-import com.exequiel.shopcenter.app.presentacion.adapters.ItemComercioNuevo;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.exequiel.shopcenter.framework.ui.fragment.FrameworkBaseFragment;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -39,7 +36,7 @@ public class DetalleProductoFragment extends FrameworkBaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = onCreateView(inflater, container, savedInstanceState, R.layout.fragment_detalle_producto);
+        View view = onCreateView(inflater, container, savedInstanceState, R.layout.detalle_producto_parte_baja);
         //ViewPager
         titlePageIndicator = (CirclePageIndicator) view.findViewById(R.id.indicator);
         viewPager = (ViewPager) view.findViewById(R.id.pager);

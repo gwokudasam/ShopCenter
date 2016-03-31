@@ -4,13 +4,9 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.ecloud.pulltozoomview.PullToZoomScrollViewEx;
 import com.exequiel.shopcenter.R;
@@ -122,10 +118,10 @@ public class PullToZoomScrollActivity extends ActionBarActivity {
 
     private void loadViewForCode() {
         PullToZoomScrollViewEx scrollView = (PullToZoomScrollViewEx) findViewById(R.id.scroll_view);
-        View headView = LayoutInflater.from(this).inflate(R.layout.profile_head_view, null, false);
-        View zoomView = LayoutInflater.from(this).inflate(R.layout.profile_zoom_view, null, false);
+        View headView = LayoutInflater.from(this).inflate(R.layout.detalle_producto_head_view, null, false);
+        View zoomView = LayoutInflater.from(this).inflate(R.layout.detalle_producto_zoom_view, null, false);
         setViewPager(zoomView);
-        View contentView = LayoutInflater.from(this).inflate(R.layout.fragment_detalle_producto, null, false);
+        View contentView = LayoutInflater.from(this).inflate(R.layout.detalle_producto_parte_baja, null, false);
         scrollView.setHeaderView(headView);
         scrollView.setZoomView(zoomView);
         scrollView.setZoomEnabled(true);
