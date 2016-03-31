@@ -1,6 +1,7 @@
 package com.exequiel.shopcenter.app.presentacion.activitys;
 
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -9,9 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.ecloud.pulltozoomview.PullToZoomScrollViewEx;
 import com.exequiel.shopcenter.R;
+import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
+import com.viewpagerindicator.CirclePageIndicator;
 
 /**
  * Created by exequiel on 31/03/2016.
@@ -103,14 +107,29 @@ public class PullToZoomScrollActivity extends ActionBarActivity {
     }
     */
 
+    private void setViewPager(View view){
+        CirclePageIndicator titlePageIndicator;
+        ViewPager viewPager;
+        WizardInicialAdapter wizardInicialAdapter;
+        //ViewPager
+        titlePageIndicator = (CirclePageIndicator) view.findViewById(R.id.indicator);
+        viewPager = (ViewPager) view.findViewById(R.id.pager);
+        wizardInicialAdapter = new WizardInicialAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(wizardInicialAdapter);
+        titlePageIndicator.setViewPager(viewPager);
+        //ViewPager
+    }
+
     private void loadViewForCode() {
         PullToZoomScrollViewEx scrollView = (PullToZoomScrollViewEx) findViewById(R.id.scroll_view);
         View headView = LayoutInflater.from(this).inflate(R.layout.profile_head_view, null, false);
-        View zoomView = LayoutInflater.from(this).inflate(R.layout.fragment_detalle_producto, null, false);
+        View zoomView = LayoutInflater.from(this).inflate(R.layout.profile_zoom_view, null, false);
+        setViewPager(zoomView);
         View contentView = LayoutInflater.from(this).inflate(R.layout.fragment_detalle_producto, null, false);
         scrollView.setHeaderView(headView);
         scrollView.setZoomView(zoomView);
         scrollView.setZoomEnabled(true);
+        scrollView.setParallax(true);
         scrollView.setScrollContentView(contentView);
     }
 }
