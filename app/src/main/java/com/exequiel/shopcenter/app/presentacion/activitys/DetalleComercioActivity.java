@@ -41,6 +41,8 @@ import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.List;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -62,6 +64,7 @@ public class DetalleComercioActivity extends AppCompatActivity
     private NestedScrollView nestedScrollView;
     private CircleImageView circleImageView;
 
+    @InjectView(R.id.menu1)
     FloatingActionMenu menu;
     //ViewPager
     CirclePageIndicator titlePageIndicator;
@@ -70,13 +73,19 @@ public class DetalleComercioActivity extends AppCompatActivity
 
     Button btnHorarios;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detalle_comercio);
+    @InjectView(R.id.recyclerview2)
+    RecyclerView recyclerView1;
 
-        menu = (FloatingActionMenu) findViewById(R.id.menu1);
+    @InjectView(R.id.recyclerview3)
+    RecyclerView recyclerView2;
 
+    @InjectView(R.id.recyclerview4)
+    RecyclerView recyclerView3;
+
+    @InjectView(R.id.recyclerview5)
+    RecyclerView recyclerView4;
+
+    private void setRecyclersViews(){
         ProductosComercioAdapter recyclerViewAdapter1 = new ProductosComercioAdapter(new ItemCuponHolder.IMyViewHolderClicks() {
             @Override
             public void onItemClick(View caller) {
@@ -84,7 +93,6 @@ public class DetalleComercioActivity extends AppCompatActivity
                 DetalleComercioActivity.this.startActivity(intent);
             }
         });
-        RecyclerView recyclerView1 = (RecyclerView) findViewById(R.id.recyclerview2);
         final CustomLinearLayoutManager layoutManager1 = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView1.setLayoutManager(layoutManager1);
         recyclerView1.setAdapter(recyclerViewAdapter1);
@@ -97,30 +105,25 @@ public class DetalleComercioActivity extends AppCompatActivity
                 DetalleComercioActivity.this.startActivity(intent);
             }
         });
-        RecyclerView recyclerView2 = (RecyclerView) findViewById(R.id.recyclerview3);
         final CustomLinearLayoutManager layoutManager2 = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView2.setLayoutManager(layoutManager2);
         recyclerView2.setAdapter(recyclerViewAdapter2);
         recyclerView2.setNestedScrollingEnabled(false);
 
         AvisosComercioAdapter recyclerViewAdapter4 = new AvisosComercioAdapter();
-        RecyclerView recyclerView4 = (RecyclerView) findViewById(R.id.recyclerview5);
         final CustomLinearLayoutManager layoutManager4 = new CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView4.setLayoutManager(layoutManager4);
         recyclerView4.setAdapter(recyclerViewAdapter4);
         recyclerView4.setNestedScrollingEnabled(false);
 
         DetalleComentarioComercioAdapter recyclerViewAdapter3 = new DetalleComentarioComercioAdapter();
-        RecyclerView recyclerView3 = (RecyclerView) findViewById(R.id.recyclerview4);
         final CustomLinearLayoutManager layoutManager3 = new CustomLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView3.setLayoutManager(layoutManager3);
         recyclerView3.setAdapter(recyclerViewAdapter3);
         recyclerView3.setNestedScrollingEnabled(false);
+    }
 
-        //RecyclerViewAdapter
-
-        bindActivity();
-
+    private void setToolbar(){
         mToolbar.setTitle("");
         mAppBarLayout.addOnOffsetChangedListener(this);
         setSupportActionBar(mToolbar);
@@ -130,7 +133,9 @@ public class DetalleComercioActivity extends AppCompatActivity
         nestedScrollView.setOnTouchListener(this);
         mToolbar.setOnTouchListener(this);
         circleImageView.setOnTouchListener(this);
+    }
 
+    private void setBanner() {
         //ViewPager
         titlePageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
         viewPager = (ViewPager) findViewById(R.id.pager);
@@ -152,6 +157,17 @@ public class DetalleComercioActivity extends AppCompatActivity
     }
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_detalle_comercio);
+        ButterKnife.inject(this);
+        setRecyclersViews();
+        bindActivity();
+        setToolbar();
+        setBanner();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
@@ -167,14 +183,11 @@ public class DetalleComercioActivity extends AppCompatActivity
 
     private void handleToolbarTitleVisibility(float percentage) {
             if (percentage >= PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR) {
-
                 if(!mIsTheTitleVisible) {
                     startAlphaAnimation(mTitle, ALPHA_ANIMATIONS_DURATION, View.VISIBLE);
                     mIsTheTitleVisible = true;
                 }
-
             } else {
-
                 if (mIsTheTitleVisible) {
                     startAlphaAnimation(mTitle, ALPHA_ANIMATIONS_DURATION, View.INVISIBLE);
                     mIsTheTitleVisible = false;
@@ -188,7 +201,6 @@ public class DetalleComercioActivity extends AppCompatActivity
                 startAlphaAnimation(mTitleContainer, ALPHA_ANIMATIONS_DURATION, View.INVISIBLE);
                 mIsTheTitleContainerVisible = false;
             }
-
         } else {
 
             if (!mIsTheTitleContainerVisible) {
@@ -202,7 +214,6 @@ public class DetalleComercioActivity extends AppCompatActivity
         AlphaAnimation alphaAnimation = (visibility == View.VISIBLE)
             ? new AlphaAnimation(0f, 1f)
             : new AlphaAnimation(1f, 0f);
-
         alphaAnimation.setDuration(duration);
         alphaAnimation.setFillAfter(true);
         v.startAnimation(alphaAnimation);
@@ -229,7 +240,6 @@ public class DetalleComercioActivity extends AppCompatActivity
 
     @OnClick(R.id.fab1)
     public void clickMenu(View v){
-
     }
 
     @Override

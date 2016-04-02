@@ -52,7 +52,8 @@ public class NavigationAdapter extends BaseAdapter {
             view = new NavigationItem();
             convertView = inflator.inflate(R.layout.item_menu, null);
             ItemMenuLateralHolder holder = new ItemMenuLateralHolder(convertView);
-            holder.setBadge(position);
+            if (position==5)
+                holder.setBadge(position);
             holder.setTitulo(itm.getTitulo());
             holder.setImageResource(itm.getIcono());
             convertView.setTag(holder);
