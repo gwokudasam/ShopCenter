@@ -20,6 +20,7 @@ import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComentarioComerc
 import com.exequiel.shopcenter.app.presentacion.adapters.Holders.ItemMenuLateralHolder;
 import com.exequiel.shopcenter.app.presentacion.adapters.ItemComercioNuevo;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
+import com.exequiel.shopcenter.app.presentacion.fragments.handle.HandleFragmentsActivityGral;
 import com.exequiel.shopcenter.framework.ui.fragment.FrameworkBaseFragment;
 import com.squareup.picasso.Picasso;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -113,6 +114,27 @@ public class HomeFragment extends FrameworkBaseFragment {
         recyclerView3.setNestedScrollingEnabled(false);
 
         return view;
+    }
+
+    @OnClick({R.id.home_card_buscar_productos,R.id.home_card_cupones,R.id.home_card_tiendas_cercanas,R.id.home_card_ver_comercios})
+    public void click(View view){
+        switch (view.getId()){
+            case R.id.home_card_buscar_productos:{
+                HandleFragmentsActivityGral.changeFragment(AgendaFragment.class,getFragmentManager());
+                break;
+            }
+            case R.id.home_card_cupones:{
+                HandleFragmentsActivityGral.changeFragment(CuponesFragment.class,getFragmentManager());
+                break;
+            }
+            case R.id.home_card_tiendas_cercanas:{
+                break;
+            }
+            case R.id.home_card_ver_comercios:{
+                HandleFragmentsActivityGral.changeFragment(BuscarComercios.class,getFragmentManager());
+                break;
+            }
+        }
     }
 
     @Override

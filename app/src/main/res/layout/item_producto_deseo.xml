@@ -7,6 +7,7 @@
     android:clickable="true"
     card_view:cardElevation="0dp"
     android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@android:color/white"
     android:focusable="true"
     android:foreground="?android:selectableItemBackground">
 
@@ -136,13 +137,6 @@
                     android:textStyle="bold"
                     android:gravity="right|center_vertical" />
             </LinearLayout>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="0.5dp"
-                android:background="#ffd5d5d5"
-                android:layout_above="@+id/linearLayout1"
-                android:layout_toRightOf="@+id/imagen">
-            </View>
         </LinearLayout>
     </LinearLayout>
 
