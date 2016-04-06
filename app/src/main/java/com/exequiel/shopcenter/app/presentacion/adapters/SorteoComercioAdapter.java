@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import com.exequiel.shopcenter.R;
 import com.exequiel.shopcenter.app.presentacion.adapters.Holders.DetalleProductoHolder;
+import com.exequiel.shopcenter.app.presentacion.adapters.Holders.DetalleSorteoHolder;
 import com.exequiel.shopcenter.app.presentacion.adapters.Holders.ItemCuponHolder;
 
 import java.util.List;
@@ -14,24 +15,24 @@ import java.util.List;
 /**
  * Created by exequiel on 18/02/2016.
  */
-public class ProductosComercioAdapter extends RecyclerView.Adapter<DetalleProductoHolder> {
+public class SorteoComercioAdapter extends RecyclerView.Adapter<DetalleSorteoHolder> {
 
     private List<Object> listData;
     private ItemCuponHolder.IMyViewHolderClicks listener;
 
-    public ProductosComercioAdapter(ItemCuponHolder.IMyViewHolderClicks listener){
+    public SorteoComercioAdapter(ItemCuponHolder.IMyViewHolderClicks listener){
         super();
         this.listener=listener;
     }
 
     @Override
-    public DetalleProductoHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_comercio_detalle_producto,parent,false);
-        return new DetalleProductoHolder(v,listener);
+    public DetalleSorteoHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_comercio_detalle_sorteo,parent,false);
+        return new DetalleSorteoHolder(v,listener);
     }
 
     @Override
-    public void onBindViewHolder(DetalleProductoHolder holder, int position) {
+    public void onBindViewHolder(DetalleSorteoHolder holder, int position) {
 
     }
 

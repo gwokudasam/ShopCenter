@@ -32,6 +32,7 @@ import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComentarioComerc
 import com.exequiel.shopcenter.app.presentacion.adapters.DetalleComercioAdapter;
 import com.exequiel.shopcenter.app.presentacion.adapters.Holders.ItemCuponHolder;
 import com.exequiel.shopcenter.app.presentacion.adapters.ProductosComercioAdapter;
+import com.exequiel.shopcenter.app.presentacion.adapters.SorteoComercioAdapter;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.exequiel.shopcenter.app.presentacion.fragments.DetalleProductoFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.handle.HandleFragmentsActivityGral;
@@ -86,10 +87,10 @@ public class DetalleComercioActivity extends AppCompatActivity
     RecyclerView recyclerView4;
 
     private void setRecyclersViews(){
-        ProductosComercioAdapter recyclerViewAdapter1 = new ProductosComercioAdapter(new ItemCuponHolder.IMyViewHolderClicks() {
+        SorteoComercioAdapter recyclerViewAdapter1 = new SorteoComercioAdapter(new ItemCuponHolder.IMyViewHolderClicks() {
             @Override
             public void onItemClick(View caller) {
-                Intent intent = new Intent(DetalleComercioActivity.this,DetalleProductoActivity.class);
+                Intent intent = new Intent(DetalleComercioActivity.this,DetalleSorteoActivity.class);
                 DetalleComercioActivity.this.startActivity(intent);
             }
         });
@@ -169,7 +170,7 @@ public class DetalleComercioActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

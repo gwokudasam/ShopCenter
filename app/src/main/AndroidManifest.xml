@@ -30,6 +30,11 @@
         </activity>
 
         <activity
+            android:name=".app.presentacion.activitys.DetalleSorteoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
             android:name=".app.presentacion.activitys.GeneralActivity"
             android:screenOrientation="portrait">
         </activity>
