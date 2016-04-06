@@ -231,19 +231,41 @@ public class DetalleComercioActivity extends AppCompatActivity
         return false;
     }
 
-    private void showDialog(){
+    private void showCustomDialog(int idResourseLayout){
         Dialog customDialog=new Dialog(this, R.style.Theme_Dialog_Translucent);
         customDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        customDialog.setContentView(R.layout.dialog_horarios);
+        customDialog.setContentView(idResourseLayout);
         customDialog.show();
     }
 
-    @OnClick(R.id.fab1)
+    @OnClick({R.id.fab1_contactar,R.id.fab2_como_llegar,R.id.fab3_redes_sociales,
+    R.id.fab4_seguir,R.id.fab5_compartir,R.id.fab6_puntuar})
     public void clickMenu(View v){
+        switch (v.getId()){
+            case R.id.fab1_contactar :{
+                break;
+            }
+            case R.id.fab2_como_llegar :{
+                break;
+            }
+            case R.id.fab3_redes_sociales :{
+                break;
+            }
+            case R.id.fab4_seguir :{
+                break;
+            }
+            case R.id.fab5_compartir :{
+                break;
+            }
+            case R.id.fab6_puntuar :{
+                showCustomDialog(R.layout.dialogo_puntuar);
+                break;
+            }
+        }
     }
 
     @Override
     public void onClick(View v) {
-        showDialog();
+        showCustomDialog(R.layout.dialog_horarios);
     }
 }

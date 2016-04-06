@@ -29,6 +29,7 @@ import com.exequiel.shopcenter.app.presentacion.fragments.handle.HandleFragments
 import java.util.ArrayList;
 
 import butterknife.InjectView;
+import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class GeneralActivity extends BaseActivity {
@@ -133,6 +134,11 @@ public class GeneralActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         toggleDrawer();
         return super.onOptionsItemSelected(item);
+    }
+
+    @OnClick(R.id.toolbar_menu)
+    public void menuClick(){
+        toggleDrawer();
     }
 
     private void seleccionarItem(int position){

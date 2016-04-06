@@ -461,8 +461,7 @@
 				<LinearLayout
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:orientation="vertical"
-					android:layout_marginTop="7dp">
+					android:orientation="vertical">
 
 					<LinearLayout
 						android:layout_width="match_parent"
@@ -478,7 +477,7 @@
 							<android.support.v4.view.ViewPager
 								android:id="@+id/pager"
 								android:layout_width="match_parent"
-								android:layout_height="150dp" />
+								android:layout_height="200dp" />
 
 							<ImageView
                                 android:layout_width="40dp"
@@ -498,20 +497,20 @@
 
 								android:layout_alignParentRight="true" />
 
-						</RelativeLayout>
+							<com.viewpagerindicator.CirclePageIndicator
+								android:id="@+id/indicator"
+								android:padding="5dip"
+								android:layout_height="25dp"
+								android:layout_width="match_parent"
+								app:radius="4dp"
+								app:fillColor="@color/primary"
+								app:pageColor="@android:color/transparent"
+								app:strokeColor="@color/primary"
+								app:strokeWidth="1dp"
+								android:layout_alignParentBottom="true"
+								android:layout_alignParentLeft="true"/>
 
-						<com.viewpagerindicator.CirclePageIndicator
-							android:id="@+id/indicator"
-							android:padding="10dip"
-							android:layout_height="20dp"
-							android:layout_width="match_parent"
-							app:radius="4dp"
-							app:fillColor="@color/color_negro_transparente"
-							app:pageColor="@android:color/transparent"
-							app:strokeColor="@color/color_negro_transparente"
-							app:strokeWidth="1dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_alignParentLeft="true" />
+						</RelativeLayout>
 
 					</LinearLayout>
 
@@ -524,56 +523,11 @@
 						android:paddingTop="0dp"/>
 				</LinearLayout>
 
-			<LinearLayout
+				<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:orientation="vertical"
-				android:layout_marginBottom="5dp">
-
-				<RelativeLayout
-					android:layout_width="match_parent"
-					android:layout_height="25dp"
-					android:orientation="horizontal"
-					android:layout_marginTop="20dp"
-					android:layout_marginLeft="10dp"
-					android:layout_marginRight="10dp"
-					android:layout_marginBottom="10dp">
-
-					<TextView
-						android:layout_width="wrap_content"
-						android:layout_height="match_parent"
-						android:text="Destacados!"
-						android:layout_alignParentLeft="true"
-						android:gravity="bottom"
-						android:id="@+id/textView2" />
-
-					<TextView
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:text="Ver más"
-						android:gravity="right"
-						android:background="#3a3a3a"
-						android:textColor="#ffffff"
-						android:padding="5dp"
-						android:layout_alignParentRight="true"
-						android:id="@+id/textView52" />
-				</RelativeLayout>
-
-				<android.support.v7.widget.RecyclerView
-					android:id="@+id/recyclerview2"
-					android:layout_width="match_parent"
-					android:layout_height="match_parent"
-					android:layout_below="@+id/cardview2"
-					android:clipToPadding="false"
-					android:paddingTop="0dp"/>
-			</LinearLayout>
-
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:orientation="vertical"
-				android:layout_marginTop="5dp"
-				android:layout_marginBottom="5dp">
+					android:layout_marginBottom="5dp">
 
 				<RelativeLayout
 					android:layout_width="match_parent"
@@ -658,6 +612,50 @@
 						android:paddingTop="0dp"/>
 				</LinearLayout>
 
+
+				<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Sorteos"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="bottom"
+                            android:id="@+id/textView2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ver más"
+                            android:gravity="right"
+                            android:background="#3a3a3a"
+                            android:textColor="#ffffff"
+                            android:padding="5dp"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/textView52" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/cardview2"
+                        android:clipToPadding="false"
+                        android:paddingTop="0dp"/>
+                </LinearLayout>
 
 				<LinearLayout
 					android:layout_width="match_parent"
@@ -773,7 +771,7 @@
 			app:menu_labels_colorRipple="@android:color/transparent">
 
 			<com.github.clans.fab.FloatingActionButton
-				android:id="@+id/fab1"
+				android:id="@+id/fab1_contactar"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:src="@drawable/ic_call_white_18dp"
@@ -784,7 +782,7 @@
 				app:fab_colorRipple="#1B5E20"/>
 
 			<com.github.clans.fab.FloatingActionButton
-				android:id="@+id/fab2"
+				android:id="@+id/fab2_como_llegar"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:src="@drawable/ic_location_on_white_18dp"
@@ -795,7 +793,7 @@
 				app:fab_colorRipple="#1B5E20"/>
 
 			<com.github.clans.fab.FloatingActionButton
-				android:id="@+id/fab3"
+				android:id="@+id/fab3_redes_sociales"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:src="@drawable/ic_group_white_18dp"
@@ -806,7 +804,7 @@
 				app:fab_colorRipple="#1B5E20"/>
 
 			<com.github.clans.fab.FloatingActionButton
-				android:id="@+id/fab4"
+				android:id="@+id/fab4_seguir"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:src="@drawable/ic_rss_feed_white_18dp"
@@ -817,7 +815,7 @@
 				app:fab_colorRipple="#1B5E20"/>
 
 			<com.github.clans.fab.FloatingActionButton
-				android:id="@+id/fab5"
+				android:id="@+id/fab5_compartir"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:src="@drawable/ic_chat_white_18dp"
@@ -828,7 +826,7 @@
 				app:fab_colorRipple="#1B5E20"/>
 
 			<com.github.clans.fab.FloatingActionButton
-				android:id="@+id/fab6"
+				android:id="@+id/fab6_puntuar"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:src="@drawable/ic_sentiment_satisfied_white_18dp"
