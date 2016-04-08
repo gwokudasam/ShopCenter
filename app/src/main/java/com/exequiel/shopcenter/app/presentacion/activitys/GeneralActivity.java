@@ -22,6 +22,7 @@ import com.exequiel.shopcenter.app.presentacion.fragments.CuponesFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.HomeFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.ListDeseosFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.ListProductsFragment;
+import com.exequiel.shopcenter.app.presentacion.fragments.NotificacionesFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.ProfileFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.SocialTabFragment;
 import com.exequiel.shopcenter.app.presentacion.fragments.handle.HandleFragmentsActivityGral;
@@ -173,6 +174,7 @@ public class GeneralActivity extends BaseActivity {
                 HandleFragmentsActivityGral.changeFragment(ListDeseosFragment.class, getSupportFragmentManager());
                 break;
             case 6:
+                HandleFragmentsActivityGral.changeFragment(NotificacionesFragment.class, getSupportFragmentManager());
                 break;
             case 7:
                 HandleFragmentsActivityGral.changeFragment(SocialTabFragment.class, getSupportFragmentManager());

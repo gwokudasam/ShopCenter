@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- colors -->
-    <color name="primary">#FF0288B4</color>
+    <color name="primary">#FF027AA8</color>
     <color name="primary_press">#FF40A310</color>
     <color name="primary_transparent">#B247B612</color>
     <color name="primaryDark">#FF47B612</color>
@@ -10,9 +10,14 @@
     <color name="color_negro_transparente">#DC000000</color>
 
     <color name="color_menu_negro_separador">#FF0E1518</color>
+    <color name="color_menu_negro_bg">#FF171F22</color>
+    <color name="color_menu_negro_selected_bg">#FF0E1618</color>
+
+<!--
+    <color name="color_menu_negro_separador">#FF0E1518</color>
     <color name="color_menu_negro_bg">#212425</color>
     <color name="color_menu_negro_selected_bg">#FF131413</color>
-
+-->
     <color name="color_menu_txt_color">#FF687780</color>
     <color name="color_menu_negro_claro_img">#96424242</color>
     <color name="color_azul_oscuro_gral">#455057</color>
@@ -33,5 +38,10 @@
     <color name="hapn">#FF0288B4</color>
     <color name="verde_primary">#FF47B612</color>
     <color name="otro_azul">#FF024C8D</color>
+    <color name="otro_azul2">#FF027AA8</color>
+    <color name="azul_linked_in">#FF0491BE</color>
+    <color name="color_negro_toolbar">#FF091418</color>
+    <color name="color_negro_bg_linked">#FF171F22</color>
+
 
 </resources>

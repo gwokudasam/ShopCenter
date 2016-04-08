@@ -13,8 +13,8 @@
             <stroke
                 android:dashGap="0px"
                 android:dashWidth="10px"
-                android:width="0.8dp"
-                android:color="#f0f0f0" />
+                android:width="0.2dp"
+                android:color="@android:color/darker_gray" />
         </shape>
     </item>
 

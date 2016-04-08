@@ -22,14 +22,14 @@
     <!-- Drawer -->
     <string name="drawer_welcome">Welcome,</string>
     <string-array name="drawer_nav_options">
-        <item>HOME</item>
-        <item>MI CUENTA</item>
-        <item>VOUCHERS Y CUPONES</item>
-        <item>AGENDA</item>
-        <item>DESEOS</item>
-        <item>NOTIFICACIONES</item>
-        <item>REPORTAR MEJORAS</item>
-        <item>CONTACTO</item>
+        <item>Home</item>
+        <item>Mi cuenta</item>
+        <item>Mis cupones</item>
+        <item>Mi agenda</item>
+        <item>Deseos</item>
+        <item>Notificaciones</item>
+        <item>Reportar mejoras</item>
+        <item>Contacto</item>
         <item>CIUDAD</item>
     </string-array>
 
