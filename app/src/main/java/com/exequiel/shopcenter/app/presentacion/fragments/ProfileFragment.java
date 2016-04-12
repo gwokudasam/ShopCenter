@@ -1,32 +1,17 @@
 package com.exequiel.shopcenter.app.presentacion.fragments;
 
-import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.ImageView;
 
 import com.exequiel.shopcenter.R;
-import com.exequiel.shopcenter.app.presentacion.adapters.CustomLinearLayoutManager;
-import com.exequiel.shopcenter.app.presentacion.adapters.ItemComercioNuevo;
-import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.exequiel.shopcenter.framework.ui.fragment.FrameworkBaseFragment;
-import com.exequiel.shopcenter.framework.ui.view.ProportionalImageView;
-import com.viewpagerindicator.CirclePageIndicator;
 
 import in.srain.cube.views.ptr.PtrClassicFrameLayout;
-import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrHandler;
-import in.srain.cube.views.ptr.header.StoreHouseHeader;
 
 /**
  * Created by exequiel on 10/03/2016.

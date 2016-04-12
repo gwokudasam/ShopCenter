@@ -1,6 +1,5 @@
 package com.exequiel.shopcenter.app.presentacion.fragments;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -17,7 +16,7 @@ import android.widget.LinearLayout;
 import com.ecloud.pulltozoomview.PullToZoomScrollViewEx;
 import com.exequiel.shopcenter.R;
 import com.exequiel.shopcenter.app.presentacion.adapters.CustomLinearLayoutManager;
-import com.exequiel.shopcenter.app.presentacion.adapters.ItemComercioNuevo;
+import com.exequiel.shopcenter.app.presentacion.adapters.ItemComercioNuevoAdapter;
 import com.exequiel.shopcenter.app.presentacion.adapters.WizardInicialAdapter;
 import com.exequiel.shopcenter.app.presentacion.fragments.handle.HandleFragmentsActivityGral;
 import com.exequiel.shopcenter.framework.ui.fragment.FrameworkBaseFragment;
@@ -26,8 +25,6 @@ import com.viewpagerindicator.CirclePageIndicator;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import butterknife.InjectView;
-import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
@@ -87,7 +84,7 @@ public class HomeFragment extends FrameworkBaseFragment {
     }
 
     private void setContentViewZoom(View contentView) {
-        ItemComercioNuevo recyclerViewAdapter3 = new ItemComercioNuevo();
+        ItemComercioNuevoAdapter recyclerViewAdapter3 = new ItemComercioNuevoAdapter();
         recyclerView3 = (RecyclerView) contentView.findViewById(R.id.recyclerviewlastcomer);
         final CustomLinearLayoutManager layoutManager3 = new CustomLinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         // final LinearLayoutManager layoutManager = new LinearLayoutManager(this);

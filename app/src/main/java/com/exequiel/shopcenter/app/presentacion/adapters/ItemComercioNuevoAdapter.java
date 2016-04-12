@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by exequiel on 22/02/2016.
  */
-public class ItemComercioNuevo extends RecyclerView.Adapter<DetalleComercioHoler> {
+public class ItemComercioNuevoAdapter extends RecyclerView.Adapter<DetalleComercioHoler> {
 
     private List<Object> listData;
 
