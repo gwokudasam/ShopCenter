@@ -38,6 +38,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         iniciarPresentacion();
     }
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
     public abstract void iniciarPresentacion();
 
 }

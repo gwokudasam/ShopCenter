@@ -48,7 +48,7 @@ import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class DetalleComercioActivity extends AppCompatActivity
+public class DetalleComercioActivity extends BaseActivity
     implements AppBarLayout.OnOffsetChangedListener, View.OnTouchListener, View.OnClickListener {
 
     private static final float PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR  = 0.9f;
@@ -268,5 +268,10 @@ public class DetalleComercioActivity extends AppCompatActivity
     @Override
     public void onClick(View v) {
         showCustomDialog(R.layout.dialog_horarios);
+    }
+
+    @Override
+    public void iniciarPresentacion() {
+
     }
 }
